@@ -36,7 +36,7 @@
 			opacity: 0.75;
 		}
 		.waypoints {
-			fill: black;
+			fill: white;
 			opacity: 0;
 		}
 		
@@ -126,7 +126,7 @@
 				.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 				
 				var dummyData = [];
-				
+				 
 				x.domain([0, 20]);
 				y.domain([40, 220]);
 				
@@ -151,6 +151,8 @@
 					
 					
 			d3.json("out.json", function(collection) {
+				
+				console.log(collection);
 				
 				var featuresdata = collection.features;
 				mapCoordinatesToView(featuresdata);
@@ -177,7 +179,11 @@
 					.attr("class", function(d) {
 						return "waypoints " + "c" + d.properties.time
 					})
-					.style("opacity", 1);
+					.style("opacity", 0);
+				
+				
+				console.log("PT");
+				console.log(ptFeatures);
 				
 				var linePath = g.selectAll(".lineConnect")
 					.data([featuresdata])
@@ -230,7 +236,7 @@
 				
 				function transition(path) {
 					linePath.transition()
-						.duration(7500)
+						.duration(10000)
 						.attrTween("stroke-dasharray", tweenDash)
 						.each("end", function() {
 						
@@ -266,6 +272,7 @@
 				
 				function getPoint(x, y) {
 					
+					var point = -1;
 					for (var i = 0; i < featuresdata.length; i++) {
 						
 						var dp = featuresdata[i].properties;
@@ -274,11 +281,15 @@
 								"time": i++,
 								"heart": Math.floor(Math.random() * (220 - 40)) + 40
 							});
+							point = i;
+							break;
 						}
-						
-						chartPath.attr("d", area);
 					}
 					
+ 					d3.select(".c" + point).style("opacity", 1);
+					
+						
+					chartPath.attr("d", area);
 					return oldTime;
 				}
 				

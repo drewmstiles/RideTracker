@@ -77,8 +77,9 @@
 	<div id="demo"></div>
 	<div id="map"></div>
 		<script type="text/javascript">
-		
-			var mapboxTiles = L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png?access_token={token}', {
+// 		'http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png
+
+			var mapboxTiles = L.tileLayer('https://api.mapbox.com/v4/mapbox.run-bike-hike/{z}/{x}/{y}.png?access_token={token}', {
        			attribution: '<a href="http://www.mapbox.com/about/maps/" target="_blank">Terms &amp; Feedback</a>',
        			token: 'pk.eyJ1IjoiZHJld3N0aWxlcyIsImEiOiJjaWw2YXR4eXgwMWl6dWhsdjhrZGxuMXBqIn0.4rYaU8tPJ9Mw2bniPfAKdQ'
     		});
@@ -196,7 +197,7 @@
 					.attr("id", "marker")
 					.attr("class", "travelMarker");
 			
-			map.on("viewreset", reset);
+// 			map.on("viewreset", reset);
 			
 			reset();
 			
@@ -236,15 +237,9 @@
 				
 				function transition(path) {
 					linePath.transition()
-						.duration(20000)
+						.duration(2000)
 						.attrTween("stroke-dasharray", tweenDash)
 						.each("end", function() {
-						
-					// 	for (var i = 0; i < queue.length; i++) {
-// 							if (i % 2 == 0) {
-// 								queue.splice(i, 1);
-// 							}
-// 						}
 						
 						var m = 0;
 						for (var i = 0; i < queue.length; i++) {
@@ -281,8 +276,12 @@
 						// p is the point on the line (coordinates) at a given length along the line.
 						// If l = 50 and state currently midway through time interval p would be 25.
 						var p = linePath.node().getPointAtLength(t * l);
-						
-						
+					
+					if (toggle++ % 5 == 0) {	
+						var focus = map.layerPointToLatLng(new L.Point(p.x, p.y));
+						map.panTo(focus);
+					}
+					
  						getPoint(p);
 						
 						return interpolate(t);
@@ -326,6 +325,12 @@
 			function animatePoints(p) {
 				setTimeout(function() {
 					marker.attr("transform", "translate(" + p.x + "," + p.y + ")");
+					
+					if (toggle++ % 15 == 0) {
+	                    var focus = map.layerPointToLatLng(new L.Point(p.x, p.y));
+						map.panTo(focus);
+					}
+					
 				}, p.m);
 			}
 
@@ -345,7 +350,7 @@
 			var queue = [];
 			 							var points = [];
 				
-			var animating = false;
+			var toggle = 0;
 					
 					
 			function applyLatLngToLayer(d) {

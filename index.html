@@ -236,16 +236,42 @@
 				
 				function transition(path) {
 					linePath.transition()
-						.duration(10000)
+						.duration(20000)
 						.attrTween("stroke-dasharray", tweenDash)
 						.each("end", function() {
+						
+					// 	for (var i = 0; i < queue.length; i++) {
+// 							if (i % 2 == 0) {
+// 								queue.splice(i, 1);
+// 							}
+// 						}
+						
+						var m = 0;
+						for (var i = 0; i < queue.length; i++) {
+							if (i < 200) {
+								m += 2;
+							}
+							else if (i < 2000) {
+								m += 5;
+							}
+							else {
+								m += 1;
+							}
+							
+							queue[i].m = m;
+
+						}
+						
+						while (queue.length > 0) {
+							animatePoints(queue.shift());
+						}
 						
 						})
 				}
 				
 				function tweenDash() {
 					return function(t) {
-						
+					
 						// Total length of path.
 						var l = linePath.node().getTotalLength();
 						interpolate = d3.interpolateString("0," + l, l + "," + l);
@@ -256,33 +282,33 @@
 						// If l = 50 and state currently midway through time interval p would be 25.
 						var p = linePath.node().getPointAtLength(t * l);
 						
-						// Move the marker to that point.
-						marker.attr("transform", "translate(" + p.x + "," + p.y + ")");
 						
- 						getPoint(p.x, p.y);
+ 						getPoint(p);
 						
 						return interpolate(t);
 					}
 				}
-				
+
 				function projectPoint(x, y)	{
 					var point = map.latLngToLayerPoint(new L.LatLng(y, x));
 					this.stream.point(point.x, point.y);
 				}
 				
-				function getPoint(x, y) {
+				function getPoint(p) {
 					
 					var point = -1;
 					for (var i = 0; i < featuresdata.length; i++) {
-						
+						queue.push(p);
 						var dp = featuresdata[i].properties;
-						if (Math.abs(dp.x - x) <= 3 && Math.abs(dp.y - y) <= 3) {
+						if (Math.abs(dp.x - p.x) <= 3 && Math.abs(dp.y - p.y) <= 3) {
 							dummyData.push({
 								"time": i++,
 								"heart": Math.floor(Math.random() * (220 - 40)) + 40
 							});
 							point = i;
-							break;
+						}
+						else {
+						// techno!
 						}
 					}
 					
@@ -295,9 +321,18 @@
 				
 				var oldTime = null;
 				var i = 0;
-			});
+				
+						
+			function animatePoints(p) {
+				setTimeout(function() {
+					marker.attr("transform", "translate(" + p.x + "," + p.y + ")");
+				}, p.m);
+			}
+
 			
 			
+			
+		
 			function mapCoordinatesToView(data) {
 				for (var i = 0; i < data.length; i++) {
 					var coordinates = applyLatLngToLayer(data[i]);
@@ -307,12 +342,18 @@
 				}
 			}
 			
-			
+			var queue = [];
+			 							var points = [];
+				
+			var animating = false;
+					
+					
 			function applyLatLngToLayer(d) {
 				var y = d.geometry.coordinates[1]
 				var x = d.geometry.coordinates[0];
 				return map.latLngToLayerPoint(new L.LatLng(y, x))
 			}
+		});
     	</script>
 </body>
 </html>

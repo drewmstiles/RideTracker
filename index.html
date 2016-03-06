@@ -36,28 +36,28 @@
 			opacity: 0.75;
 		}
 		.waypoints {
-			fill: white;
-			opacity: 0;
+			fill: red;
+			opacity: 1;
 		}
 		
 		
 		.areaChart {
 			position: absolute;
 			bottom: 0;
-			background: #000;
-			opacity: 0.5;
+			background: #fff;
+			opacity: 0.6;
 		}
 		
 		.axis path,
 		.axis line {
 			fill: none;
-			stroke: #FFF;
+			stroke: #000;
 			shape-rendering: crispEdges;
 			stroke-width:1;
 		}
 		
 		.axis text {
-			stroke: white;
+			stroke: black;
 		}
 
 	.lineConnect {
@@ -66,7 +66,7 @@
 		opacity: 1;
 	}
 	.locnames {
-		fill: black;
+		fill: white;
 		text-shadow: 1px 1px 1px #FFF, 3px 3px 5px #000;
 		font-weight: bold;
 		font-size: 13px;
@@ -86,7 +86,7 @@
      
 			var map = L.map('map')
 				.addLayer(mapboxTiles)
-				.setView([33.77642, -118.11548], 15);
+				.setView([34.00756196861457, -118.49982261657716], 15);
 							
 			var svg = d3.select(map.getPanes().overlayPane).append("svg");
 			var g = svg.append("g").attr("class", "leaflet-zoom-hide");
@@ -128,7 +128,7 @@
 				
 				var dummyData = [];
 				 
-				x.domain([0, 20]);
+				x.domain([0, 241]);
 				y.domain([40, 220]);
 				
 				var chartPath = areaChartSvg.append("path")
@@ -150,14 +150,15 @@
 					.style("text-anchor", "end")
 					.text("Heart Rate (BPM)");
 					
-					
-			d3.json("out.json", function(collection) {
-				
-				console.log(collection);
+			
+			var queue = [];
+			
+			var currentPoint = 0;
+						var time = 0;
+			d3.json("la_out.json", function(collection) {
 				
 				var featuresdata = collection.features;
 				mapCoordinatesToView(featuresdata);
-				console.log(featuresdata);
 				
 				var transform = d3.geo.transform({ point: projectPoint });
 				var d3path = d3.geo.path().projection(transform);
@@ -183,9 +184,6 @@
 					.style("opacity", 0);
 				
 				
-				console.log("PT");
-				console.log(ptFeatures);
-				
 				var linePath = g.selectAll(".lineConnect")
 					.data([featuresdata])
 					.enter()
@@ -201,7 +199,67 @@
 			
 			reset();
 			
-			transition();
+			var precision = 10000;
+			conversion();
+			function conversion() {
+				var l = linePath.node().getTotalLength();
+				for (var i = 1; i <= precision; i++) {
+					var t = i / precision;
+					var p = linePath.node().getPointAtLength(t * l);
+					queue.push(p);
+				}
+				
+				currentPoint = 0;
+				for (var i = 0; i < queue.length; i++) {
+					assignDrawTime(queue[i]);
+				}
+				
+				currentPoint = 0;
+				
+				console.log(queue);
+				
+				while (queue.length > 0) {
+					animatePoints(queue.shift());
+				}
+			}
+			
+			function assignDrawTime(p) {
+			// highest = 32
+			// lowest = 5
+console.log(currentPoint);
+			var dp = featuresdata[currentPoint].properties;
+				if (Math.abs(dp.x - p.x) <=2 && Math.abs(dp.y - p.y) <= 2) {
+					if (currentPoint != 239) currentPoint++;
+				}
+				else {
+					
+				}
+				
+				p.t = calculateDrawTimeFromSpeed(dp.speed);
+				p.s = dp.speed;
+				
+			}
+			
+
+			function calculateDrawTimeFromSpeed(speed) {
+				
+				if (speed < 10) {
+					time += 60;
+				}
+				else if (speed < 15) {
+					time += 45;
+				}
+				else if (speed < 20) {
+					time += 30
+				}
+				else {
+					time += 15;
+				} 
+				
+				return time;
+			}
+						
+
 			
 			function reset() {
 				var bounds = d3path.bounds(collection),
@@ -234,88 +292,27 @@
 					+ (-topLeft[1] + 50) + ")");
 				}
 				
-				
-				function transition(path) {
-					linePath.transition()
-						.duration(2000)
-						.attrTween("stroke-dasharray", tweenDash)
-						.each("end", function() {
-						
-						var m = 0;
-						for (var i = 0; i < queue.length; i++) {
-							if (i < 200) {
-								m += 2;
-							}
-							else if (i < 2000) {
-								m += 5;
-							}
-							else {
-								m += 1;
-							}
-							
-							queue[i].m = m;
-
-						}
-						
-						while (queue.length > 0) {
-							animatePoints(queue.shift());
-						}
-						
-						})
-				}
-				
-				function tweenDash() {
-					return function(t) {
-					
-						// Total length of path.
-						var l = linePath.node().getTotalLength();
-						interpolate = d3.interpolateString("0," + l, l + "," + l);
-						
-						var marker = d3.select("#marker");
-						
-						// p is the point on the line (coordinates) at a given length along the line.
-						// If l = 50 and state currently midway through time interval p would be 25.
-						var p = linePath.node().getPointAtLength(t * l);
-					
-					if (toggle++ % 5 == 0) {	
-						var focus = map.layerPointToLatLng(new L.Point(p.x, p.y));
-						map.panTo(focus);
-					}
-					
- 						getPoint(p);
-						
-						return interpolate(t);
-					}
-				}
 
 				function projectPoint(x, y)	{
 					var point = map.latLngToLayerPoint(new L.LatLng(y, x));
 					this.stream.point(point.x, point.y);
 				}
 				
-				function getPoint(p) {
+				function showPoint(p) {
 					
-					var point = -1;
-					for (var i = 0; i < featuresdata.length; i++) {
-						queue.push(p);
-						var dp = featuresdata[i].properties;
-						if (Math.abs(dp.x - p.x) <= 3 && Math.abs(dp.y - p.y) <= 3) {
+						var dp = featuresdata[currentPoint].properties;
+						if (Math.abs(dp.x - p.x) <= 5 && Math.abs(dp.y - p.y) <= 5) {
 							dummyData.push({
 								"time": i++,
-								"heart": Math.floor(Math.random() * (220 - 40)) + 40
+								"heart": dp.heart
 							});
-							point = i;
+							d3.select(".c" + currentPoint).style("opacity", 1);
+							chartPath.attr("d", area);
+														currentPoint++;
 						}
 						else {
-						// techno!
-						}
+						// wait for match
 					}
-					
- 					d3.select(".c" + point).style("opacity", 1);
-					
-						
-					chartPath.attr("d", area);
-					return oldTime;
 				}
 				
 				var oldTime = null;
@@ -326,18 +323,26 @@
 				setTimeout(function() {
 					marker.attr("transform", "translate(" + p.x + "," + p.y + ")");
 					
-					if (toggle++ % 15 == 0) {
+					var rate = getRate(p.s);
+					if (toggle++ % rate == 0) {
 	                    var focus = map.layerPointToLatLng(new L.Point(p.x, p.y));
 						map.panTo(focus);
+						showPoint(p);
 					}
 					
-				}, p.m);
+				}, p.t);
 			}
 
 			
 			
 			
-		
+		function getRate(s) {
+			switch(s) {
+				case 15: return 5;
+				default: return 2;
+			}
+		}
+			
 			function mapCoordinatesToView(data) {
 				for (var i = 0; i < data.length; i++) {
 					var coordinates = applyLatLngToLayer(data[i]);
@@ -347,7 +352,6 @@
 				}
 			}
 			
-			var queue = [];
 			 							var points = [];
 				
 			var toggle = 0;

@@ -200,7 +200,11 @@
 			reset();
 			
 			var precision = 10000;
+			var minHeart = 12;
+			var maxHeart = 8;
+			var heartRate = 600;
 			conversion();
+			heartBeatUp();
 			function conversion() {
 				var l = linePath.node().getTotalLength();
 				for (var i = 1; i <= precision; i++) {
@@ -308,7 +312,9 @@ console.log(currentPoint);
 							});
 							d3.select(".c" + currentPoint).style("opacity", 1);
 							chartPath.attr("d", area);
-														currentPoint++;
+							currentPoint++;
+						
+
 						}
 						else {
 						// wait for match
@@ -318,6 +324,20 @@ console.log(currentPoint);
 				var oldTime = null;
 				var i = 0;
 				
+					function heartBeatUp() {
+						marker.transition().duration(heartRate).attr("r", maxHeart).each("end", heartBeatDown);
+					}
+					
+					var beat = false;
+					function heartBeatDown() {
+						if (beat) {
+							beat = !beat;
+							marker.transition().duration(heartRate).attr("r", minHeart).each("end", heartBeatDown);
+						}
+						else {
+							marker.transition().duration(heartRate).attr("r", minHeart).each("end", heartBeatUp);
+						}
+					}	
 						
 			function animatePoints(p) {
 				setTimeout(function() {
@@ -337,10 +357,13 @@ console.log(currentPoint);
 			
 			
 		function getRate(s) {
-			switch(s) {
-				case 15: return 5;
-				default: return 2;
+			if (s < 10) {
+				return 5;
 			}
+			else {
+				 return 2;
+				}
+
 		}
 			
 			function mapCoordinatesToView(data) {

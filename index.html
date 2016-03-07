@@ -32,7 +32,6 @@
 			stroke-opacity: 1;
 		}
 		.travelMarker {
-			fill: yellow;
 			opacity: 0.75;
 		}
 		.waypoints {
@@ -158,10 +157,31 @@
 			d3.json("la_out.json", function(collection) {
 				
 				var featuresdata = collection.features;
+				
+				var maxCal = 0;
+				var minCal = 10000;
+				for (var i = 0; i < featuresdata.length; i++) {
+					var cal = calculateCaloriesBurned(featuresdata[i].properties.heart);
+					if (cal < minCal) {
+						minCal = cal;
+					}
+					if (cal > maxCal) {
+						maxCal = cal;
+					}
+				}
+				
+				console.log("Max = " + maxCal);
+				console.log("Min = " + minCal);
+					
 				mapCoordinatesToView(featuresdata);
 				
 				var transform = d3.geo.transform({ point: projectPoint });
 				var d3path = d3.geo.path().projection(transform);
+				
+				var calorieScale = d3.scale.linear()
+					.domain([0.2671928776290631, 1.013597036328872])
+					.range(["blue", "red"])
+					.interpolate(d3.interpolateHcl);
 				
 				
 				var toLine = d3.svg.line()
@@ -200,8 +220,8 @@
 			reset();
 			
 			var precision = 10000;
-			var minHeart = 12;
-			var maxHeart = 8;
+			var minHeart = 15;
+			var maxHeart = 10;
 			var heartRate = 600;
 			conversion();
 			heartBeatUp();
@@ -290,6 +310,9 @@
 								"time": i++,
 								"heart": dp.heart
 							});
+							
+							setHeartRate(dp.heart);
+							d3.select(".travelMarker").attr("fill", calorieScale(calculateCaloriesBurned(dp.heart)));
 							d3.select(".c" + currentPoint).style("opacity", 1);
 							chartPath.attr("d", area);
 							currentPoint++;
@@ -366,6 +389,21 @@
 				else {
 					return 8;
 				} 
+		}
+		
+		function calculateCaloriesBurned(hr) {
+			return ((-55.0969 + (0.6309 * hr) + (0.1988 * 160) + (0.2017 * 23))/4.184) * 0.05 * 1;
+		}
+		
+		function setHeartRate(r) {
+		// scaling to range 100 - 1000 ms
+		var scaleFactor = 1000 / 160;
+		
+		var shift = r - 40; // min heart rate
+		
+		var transform = shift * scaleFactor;
+		
+		heartRate = 1200 - (transform + 100); // min of mapped domain
 		}
 			
 			function mapCoordinatesToView(data) {

@@ -4,9 +4,9 @@
       "properties": {
         "region": "pch",
         "time": 0,
-        "heart": "65",
-        "speed": "18",
-        "elevation": "4"
+        "heart": "67",
+        "speed": "19",
+        "elevation": "44"
       },
       "type": "Feature",
       "geometry": {
@@ -21,9 +21,9 @@
       "properties": {
         "region": "pch",
         "time": 1,
-        "heart": "67",
+        "heart": "66",
         "speed": "18",
-        "elevation": "19"
+        "elevation": "45"
       },
       "type": "Feature",
       "geometry": {
@@ -38,9 +38,9 @@
       "properties": {
         "region": "pch",
         "time": 2,
-        "heart": "65",
+        "heart": "69",
         "speed": "18",
-        "elevation": "26"
+        "elevation": "39"
       },
       "type": "Feature",
       "geometry": {
@@ -55,9 +55,9 @@
       "properties": {
         "region": "pch",
         "time": 3,
-        "heart": "65",
+        "heart": "68",
         "speed": "19",
-        "elevation": "23"
+        "elevation": "48"
       },
       "type": "Feature",
       "geometry": {
@@ -72,9 +72,9 @@
       "properties": {
         "region": "pch",
         "time": 4,
-        "heart": "68",
+        "heart": "65",
         "speed": "19",
-        "elevation": "14"
+        "elevation": "7"
       },
       "type": "Feature",
       "geometry": {
@@ -89,9 +89,9 @@
       "properties": {
         "region": "pch",
         "time": 5,
-        "heart": "67",
+        "heart": "69",
         "speed": "19",
-        "elevation": "25"
+        "elevation": "19"
       },
       "type": "Feature",
       "geometry": {
@@ -106,9 +106,9 @@
       "properties": {
         "region": "pch",
         "time": 6,
-        "heart": "67",
+        "heart": "65",
         "speed": "19",
-        "elevation": "29"
+        "elevation": "8"
       },
       "type": "Feature",
       "geometry": {
@@ -123,9 +123,9 @@
       "properties": {
         "region": "pch",
         "time": 7,
-        "heart": "67",
-        "speed": "18",
-        "elevation": "37"
+        "heart": "68",
+        "speed": "19",
+        "elevation": "45"
       },
       "type": "Feature",
       "geometry": {
@@ -140,9 +140,9 @@
       "properties": {
         "region": "pch",
         "time": 8,
-        "heart": "68",
+        "heart": "65",
         "speed": "19",
-        "elevation": "19"
+        "elevation": "30"
       },
       "type": "Feature",
       "geometry": {
@@ -159,7 +159,7 @@
         "time": 9,
         "heart": "66",
         "speed": "18",
-        "elevation": "9"
+        "elevation": "19"
       },
       "type": "Feature",
       "geometry": {
@@ -174,9 +174,9 @@
       "properties": {
         "region": "pch",
         "time": 10,
-        "heart": "69",
+        "heart": "66",
         "speed": "19",
-        "elevation": "41"
+        "elevation": "31"
       },
       "type": "Feature",
       "geometry": {
@@ -191,9 +191,9 @@
       "properties": {
         "region": "pch",
         "time": 11,
-        "heart": "67",
+        "heart": "69",
         "speed": "19",
-        "elevation": "10"
+        "elevation": "8"
       },
       "type": "Feature",
       "geometry": {
@@ -208,7 +208,7 @@
       "properties": {
         "region": "sunset",
         "time": 12,
-        "heart": "74",
+        "heart": "70",
         "speed": "14",
         "elevation": "110"
       },
@@ -225,7 +225,7 @@
       "properties": {
         "region": "sunset",
         "time": 13,
-        "heart": "74",
+        "heart": "72",
         "speed": "15",
         "elevation": "120"
       },
@@ -242,8 +242,8 @@
       "properties": {
         "region": "sunset",
         "time": 14,
-        "heart": "74",
-        "speed": "15",
+        "heart": "71",
+        "speed": "14",
         "elevation": "130"
       },
       "type": "Feature",
@@ -259,8 +259,8 @@
       "properties": {
         "region": "sunset",
         "time": 15,
-        "heart": "72",
-        "speed": "15",
+        "heart": "71",
+        "speed": "14",
         "elevation": "140"
       },
       "type": "Feature",
@@ -276,8 +276,8 @@
       "properties": {
         "region": "sunset",
         "time": 16,
-        "heart": "72",
-        "speed": "14",
+        "heart": "73",
+        "speed": "15",
         "elevation": "150"
       },
       "type": "Feature",
@@ -293,7 +293,7 @@
       "properties": {
         "region": "sunset",
         "time": 17,
-        "heart": "72",
+        "heart": "73",
         "speed": "15",
         "elevation": "160"
       },
@@ -310,7 +310,7 @@
       "properties": {
         "region": "sunset",
         "time": 18,
-        "heart": "74",
+        "heart": "73",
         "speed": "14",
         "elevation": "170"
       },
@@ -327,8 +327,8 @@
       "properties": {
         "region": "sunset",
         "time": 19,
-        "heart": "73",
-        "speed": "15",
+        "heart": "72",
+        "speed": "14",
         "elevation": "180"
       },
       "type": "Feature",
@@ -344,8 +344,8 @@
       "properties": {
         "region": "sunset",
         "time": 20,
-        "heart": "71",
-        "speed": "15",
+        "heart": "72",
+        "speed": "14",
         "elevation": "190"
       },
       "type": "Feature",
@@ -361,8 +361,8 @@
       "properties": {
         "region": "sunset",
         "time": 21,
-        "heart": "74",
-        "speed": "15",
+        "heart": "71",
+        "speed": "14",
         "elevation": "200"
       },
       "type": "Feature",
@@ -378,7 +378,7 @@
       "properties": {
         "region": "sunset",
         "time": 22,
-        "heart": "71",
+        "heart": "74",
         "speed": "15",
         "elevation": "210"
       },
@@ -395,8 +395,8 @@
       "properties": {
         "region": "sunset",
         "time": 23,
-        "heart": "72",
-        "speed": "15",
+        "heart": "70",
+        "speed": "14",
         "elevation": "220"
       },
       "type": "Feature",
@@ -412,8 +412,8 @@
       "properties": {
         "region": "sunset",
         "time": 24,
-        "heart": "71",
-        "speed": "15",
+        "heart": "73",
+        "speed": "14",
         "elevation": "230"
       },
       "type": "Feature",
@@ -430,7 +430,7 @@
         "region": "sunset",
         "time": 25,
         "heart": "70",
-        "speed": "15",
+        "speed": "14",
         "elevation": "240"
       },
       "type": "Feature",
@@ -463,8 +463,8 @@
       "properties": {
         "region": "sunset",
         "time": 27,
-        "heart": "71",
-        "speed": "14",
+        "heart": "70",
+        "speed": "15",
         "elevation": "260"
       },
       "type": "Feature",
@@ -480,8 +480,8 @@
       "properties": {
         "region": "sunset",
         "time": 28,
-        "heart": "74",
-        "speed": "15",
+        "heart": "70",
+        "speed": "14",
         "elevation": "270"
       },
       "type": "Feature",
@@ -497,7 +497,7 @@
       "properties": {
         "region": "sunset",
         "time": 29,
-        "heart": "73",
+        "heart": "74",
         "speed": "14",
         "elevation": "280"
       },
@@ -514,7 +514,7 @@
       "properties": {
         "region": "sunset",
         "time": 30,
-        "heart": "70",
+        "heart": "74",
         "speed": "15",
         "elevation": "290"
       },
@@ -531,7 +531,7 @@
       "properties": {
         "region": "sunset",
         "time": 31,
-        "heart": "72",
+        "heart": "74",
         "speed": "14",
         "elevation": "300"
       },
@@ -548,8 +548,8 @@
       "properties": {
         "region": "sunset",
         "time": 32,
-        "heart": "74",
-        "speed": "14",
+        "heart": "70",
+        "speed": "15",
         "elevation": "310"
       },
       "type": "Feature",
@@ -565,7 +565,7 @@
       "properties": {
         "region": "sunset",
         "time": 33,
-        "heart": "71",
+        "heart": "70",
         "speed": "14",
         "elevation": "320"
       },
@@ -582,7 +582,7 @@
       "properties": {
         "region": "sunset",
         "time": 34,
-        "heart": "71",
+        "heart": "72",
         "speed": "15",
         "elevation": "330"
       },
@@ -599,8 +599,8 @@
       "properties": {
         "region": "sunset",
         "time": 35,
-        "heart": "72",
-        "speed": "15",
+        "heart": "71",
+        "speed": "14",
         "elevation": "340"
       },
       "type": "Feature",
@@ -616,7 +616,7 @@
       "properties": {
         "region": "sunset",
         "time": 36,
-        "heart": "71",
+        "heart": "70",
         "speed": "14",
         "elevation": "350"
       },
@@ -650,7 +650,7 @@
       "properties": {
         "region": "sunset",
         "time": 38,
-        "heart": "72",
+        "heart": "73",
         "speed": "15",
         "elevation": "370"
       },
@@ -667,7 +667,7 @@
       "properties": {
         "region": "sunset",
         "time": 39,
-        "heart": "74",
+        "heart": "72",
         "speed": "15",
         "elevation": "380"
       },
@@ -684,7 +684,7 @@
       "properties": {
         "region": "sunset",
         "time": 40,
-        "heart": "74",
+        "heart": "72",
         "speed": "14",
         "elevation": "390"
       },
@@ -701,7 +701,7 @@
       "properties": {
         "region": "sunset",
         "time": 41,
-        "heart": "70",
+        "heart": "74",
         "speed": "15",
         "elevation": "400"
       },
@@ -718,7 +718,7 @@
       "properties": {
         "region": "sunset",
         "time": 42,
-        "heart": "73",
+        "heart": "72",
         "speed": "15",
         "elevation": "410"
       },
@@ -735,8 +735,8 @@
       "properties": {
         "region": "sunset",
         "time": 43,
-        "heart": "72",
-        "speed": "15",
+        "heart": "74",
+        "speed": "14",
         "elevation": "420"
       },
       "type": "Feature",
@@ -752,8 +752,8 @@
       "properties": {
         "region": "sunset",
         "time": 44,
-        "heart": "70",
-        "speed": "15",
+        "heart": "72",
+        "speed": "14",
         "elevation": "430"
       },
       "type": "Feature",
@@ -770,7 +770,7 @@
         "region": "sunset",
         "time": 45,
         "heart": "72",
-        "speed": "14",
+        "speed": "15",
         "elevation": "440"
       },
       "type": "Feature",
@@ -786,7 +786,7 @@
       "properties": {
         "region": "sunset",
         "time": 46,
-        "heart": "73",
+        "heart": "72",
         "speed": "15",
         "elevation": "450"
       },
@@ -804,7 +804,7 @@
         "region": "sunset",
         "time": 47,
         "heart": "71",
-        "speed": "15",
+        "speed": "14",
         "elevation": "460"
       },
       "type": "Feature",
@@ -820,8 +820,8 @@
       "properties": {
         "region": "sunset",
         "time": 48,
-        "heart": "70",
-        "speed": "14",
+        "heart": "74",
+        "speed": "15",
         "elevation": "470"
       },
       "type": "Feature",
@@ -837,9 +837,9 @@
       "properties": {
         "region": "ucla",
         "time": 49,
-        "heart": "86",
+        "heart": "85",
         "speed": "17",
-        "elevation": "476"
+        "elevation": "462"
       },
       "type": "Feature",
       "geometry": {
@@ -855,8 +855,8 @@
         "region": "ucla",
         "time": 50,
         "heart": "86",
-        "speed": "16",
-        "elevation": "458"
+        "speed": "17",
+        "elevation": "453"
       },
       "type": "Feature",
       "geometry": {
@@ -872,8 +872,8 @@
         "region": "ucla",
         "time": 51,
         "heart": "86",
-        "speed": "15",
-        "elevation": "485"
+        "speed": "16",
+        "elevation": "489"
       },
       "type": "Feature",
       "geometry": {
@@ -888,9 +888,9 @@
       "properties": {
         "region": "ucla",
         "time": 52,
-        "heart": "88",
-        "speed": "17",
-        "elevation": "486"
+        "heart": "89",
+        "speed": "16",
+        "elevation": "451"
       },
       "type": "Feature",
       "geometry": {
@@ -905,9 +905,9 @@
       "properties": {
         "region": "ucla",
         "time": 53,
-        "heart": "89",
+        "heart": "88",
         "speed": "17",
-        "elevation": "444"
+        "elevation": "453"
       },
       "type": "Feature",
       "geometry": {
@@ -922,9 +922,9 @@
       "properties": {
         "region": "ucla",
         "time": 54,
-        "heart": "87",
-        "speed": "16",
-        "elevation": "487"
+        "heart": "89",
+        "speed": "15",
+        "elevation": "478"
       },
       "type": "Feature",
       "geometry": {
@@ -941,7 +941,7 @@
         "time": 55,
         "heart": "85",
         "speed": "17",
-        "elevation": "418"
+        "elevation": "472"
       },
       "type": "Feature",
       "geometry": {
@@ -956,9 +956,9 @@
       "properties": {
         "region": "ucla",
         "time": 56,
-        "heart": "85",
-        "speed": "16",
-        "elevation": "470"
+        "heart": "89",
+        "speed": "15",
+        "elevation": "471"
       },
       "type": "Feature",
       "geometry": {
@@ -973,9 +973,9 @@
       "properties": {
         "region": "ucla",
         "time": 57,
-        "heart": "86",
-        "speed": "17",
-        "elevation": "494"
+        "heart": "88",
+        "speed": "16",
+        "elevation": "481"
       },
       "type": "Feature",
       "geometry": {
@@ -990,9 +990,9 @@
       "properties": {
         "region": "ucla",
         "time": 58,
-        "heart": "85",
+        "heart": "87",
         "speed": "17",
-        "elevation": "434"
+        "elevation": "402"
       },
       "type": "Feature",
       "geometry": {
@@ -1007,9 +1007,9 @@
       "properties": {
         "region": "ucla",
         "time": 59,
-        "heart": "87",
-        "speed": "16",
-        "elevation": "468"
+        "heart": "86",
+        "speed": "15",
+        "elevation": "417"
       },
       "type": "Feature",
       "geometry": {
@@ -1024,9 +1024,9 @@
       "properties": {
         "region": "ucla",
         "time": 60,
-        "heart": "85",
-        "speed": "17",
-        "elevation": "481"
+        "heart": "87",
+        "speed": "15",
+        "elevation": "429"
       },
       "type": "Feature",
       "geometry": {
@@ -1041,9 +1041,9 @@
       "properties": {
         "region": "ucla",
         "time": 61,
-        "heart": "87",
-        "speed": "16",
-        "elevation": "402"
+        "heart": "88",
+        "speed": "15",
+        "elevation": "467"
       },
       "type": "Feature",
       "geometry": {
@@ -1059,8 +1059,8 @@
         "region": "ucla",
         "time": 62,
         "heart": "85",
-        "speed": "16",
-        "elevation": "441"
+        "speed": "17",
+        "elevation": "432"
       },
       "type": "Feature",
       "geometry": {
@@ -1075,9 +1075,9 @@
       "properties": {
         "region": "ucla",
         "time": 63,
-        "heart": "86",
-        "speed": "17",
-        "elevation": "410"
+        "heart": "85",
+        "speed": "15",
+        "elevation": "469"
       },
       "type": "Feature",
       "geometry": {
@@ -1094,7 +1094,7 @@
         "time": 64,
         "heart": "86",
         "speed": "16",
-        "elevation": "422"
+        "elevation": "482"
       },
       "type": "Feature",
       "geometry": {
@@ -1111,7 +1111,7 @@
         "time": 65,
         "heart": "89",
         "speed": "16",
-        "elevation": "473"
+        "elevation": "405"
       },
       "type": "Feature",
       "geometry": {
@@ -1127,8 +1127,8 @@
         "region": "ucla",
         "time": 66,
         "heart": "85",
-        "speed": "17",
-        "elevation": "439"
+        "speed": "16",
+        "elevation": "444"
       },
       "type": "Feature",
       "geometry": {
@@ -1144,8 +1144,8 @@
         "region": "ucla",
         "time": 67,
         "heart": "87",
-        "speed": "17",
-        "elevation": "435"
+        "speed": "15",
+        "elevation": "423"
       },
       "type": "Feature",
       "geometry": {
@@ -1161,7 +1161,7 @@
         "region": "hill-climb",
         "time": 68,
         "heart": "159",
-        "speed": "5",
+        "speed": "7",
         "elevation": "440"
       },
       "type": "Feature",
@@ -1177,7 +1177,7 @@
       "properties": {
         "region": "hill-climb",
         "time": 69,
-        "heart": "155",
+        "heart": "158",
         "speed": "7",
         "elevation": "480"
       },
@@ -1194,7 +1194,7 @@
       "properties": {
         "region": "hill-climb",
         "time": 70,
-        "heart": "159",
+        "heart": "156",
         "speed": "6",
         "elevation": "520"
       },
@@ -1211,8 +1211,8 @@
       "properties": {
         "region": "hill-climb",
         "time": 71,
-        "heart": "155",
-        "speed": "5",
+        "heart": "159",
+        "speed": "7",
         "elevation": "560"
       },
       "type": "Feature",
@@ -1228,7 +1228,7 @@
       "properties": {
         "region": "hill-climb",
         "time": 72,
-        "heart": "156",
+        "heart": "155",
         "speed": "6",
         "elevation": "600"
       },
@@ -1245,7 +1245,7 @@
       "properties": {
         "region": "hill-climb",
         "time": 73,
-        "heart": "159",
+        "heart": "157",
         "speed": "6",
         "elevation": "640"
       },
@@ -1262,8 +1262,8 @@
       "properties": {
         "region": "hill-climb",
         "time": 74,
-        "heart": "156",
-        "speed": "5",
+        "heart": "155",
+        "speed": "7",
         "elevation": "680"
       },
       "type": "Feature",
@@ -1279,8 +1279,8 @@
       "properties": {
         "region": "hill-climb",
         "time": 75,
-        "heart": "155",
-        "speed": "5",
+        "heart": "156",
+        "speed": "7",
         "elevation": "720"
       },
       "type": "Feature",
@@ -1296,8 +1296,8 @@
       "properties": {
         "region": "hill-climb",
         "time": 76,
-        "heart": "158",
-        "speed": "6",
+        "heart": "157",
+        "speed": "5",
         "elevation": "760"
       },
       "type": "Feature",
@@ -1313,8 +1313,8 @@
       "properties": {
         "region": "hill-climb",
         "time": 77,
-        "heart": "157",
-        "speed": "6",
+        "heart": "159",
+        "speed": "7",
         "elevation": "800"
       },
       "type": "Feature",
@@ -1330,8 +1330,8 @@
       "properties": {
         "region": "hill-climb",
         "time": 78,
-        "heart": "157",
-        "speed": "7",
+        "heart": "156",
+        "speed": "5",
         "elevation": "840"
       },
       "type": "Feature",
@@ -1347,8 +1347,8 @@
       "properties": {
         "region": "hill-climb",
         "time": 79,
-        "heart": "155",
-        "speed": "7",
+        "heart": "156",
+        "speed": "6",
         "elevation": "880"
       },
       "type": "Feature",
@@ -1364,8 +1364,8 @@
       "properties": {
         "region": "hill-climb",
         "time": 80,
-        "heart": "155",
-        "speed": "6",
+        "heart": "159",
+        "speed": "7",
         "elevation": "920"
       },
       "type": "Feature",
@@ -1381,8 +1381,8 @@
       "properties": {
         "region": "hill-climb",
         "time": 81,
-        "heart": "155",
-        "speed": "7",
+        "heart": "158",
+        "speed": "5",
         "elevation": "960"
       },
       "type": "Feature",
@@ -1398,8 +1398,8 @@
       "properties": {
         "region": "hill-climb",
         "time": 82,
-        "heart": "158",
-        "speed": "7",
+        "heart": "157",
+        "speed": "6",
         "elevation": "1000"
       },
       "type": "Feature",
@@ -1416,7 +1416,7 @@
         "region": "hill-climb",
         "time": 83,
         "heart": "158",
-        "speed": "7",
+        "speed": "5",
         "elevation": "1040"
       },
       "type": "Feature",
@@ -1432,9 +1432,9 @@
       "properties": {
         "region": "hill-top",
         "time": 84,
-        "heart": "120",
+        "heart": "121",
         "speed": "10",
-        "elevation": "1091"
+        "elevation": "1176"
       },
       "type": "Feature",
       "geometry": {
@@ -1449,9 +1449,9 @@
       "properties": {
         "region": "hill-top",
         "time": 85,
-        "heart": "124",
-        "speed": "10",
-        "elevation": "1148"
+        "heart": "128",
+        "speed": "12",
+        "elevation": "1240"
       },
       "type": "Feature",
       "geometry": {
@@ -1466,9 +1466,9 @@
       "properties": {
         "region": "hill-top",
         "time": 86,
-        "heart": "121",
-        "speed": "10",
-        "elevation": "1187"
+        "heart": "125",
+        "speed": "11",
+        "elevation": "1190"
       },
       "type": "Feature",
       "geometry": {
@@ -1483,9 +1483,9 @@
       "properties": {
         "region": "hill-top",
         "time": 87,
-        "heart": "125",
-        "speed": "11",
-        "elevation": "1244"
+        "heart": "120",
+        "speed": "12",
+        "elevation": "1168"
       },
       "type": "Feature",
       "geometry": {
@@ -1500,9 +1500,9 @@
       "properties": {
         "region": "hill-top",
         "time": 88,
-        "heart": "128",
+        "heart": "124",
         "speed": "10",
-        "elevation": "1193"
+        "elevation": "1104"
       },
       "type": "Feature",
       "geometry": {
@@ -1517,9 +1517,9 @@
       "properties": {
         "region": "hill-top",
         "time": 89,
-        "heart": "129",
+        "heart": "120",
         "speed": "12",
-        "elevation": "1061"
+        "elevation": "1107"
       },
       "type": "Feature",
       "geometry": {
@@ -1534,9 +1534,9 @@
       "properties": {
         "region": "hill-top",
         "time": 90,
-        "heart": "128",
-        "speed": "11",
-        "elevation": "1256"
+        "heart": "123",
+        "speed": "10",
+        "elevation": "1073"
       },
       "type": "Feature",
       "geometry": {
@@ -1551,9 +1551,9 @@
       "properties": {
         "region": "hill-top",
         "time": 91,
-        "heart": "128",
-        "speed": "11",
-        "elevation": "1205"
+        "heart": "125",
+        "speed": "10",
+        "elevation": "1146"
       },
       "type": "Feature",
       "geometry": {
@@ -1568,9 +1568,9 @@
       "properties": {
         "region": "hill-top",
         "time": 92,
-        "heart": "122",
+        "heart": "129",
         "speed": "10",
-        "elevation": "1238"
+        "elevation": "1178"
       },
       "type": "Feature",
       "geometry": {
@@ -1585,9 +1585,9 @@
       "properties": {
         "region": "hill-top",
         "time": 93,
-        "heart": "125",
-        "speed": "11",
-        "elevation": "1100"
+        "heart": "126",
+        "speed": "12",
+        "elevation": "1272"
       },
       "type": "Feature",
       "geometry": {
@@ -1602,9 +1602,9 @@
       "properties": {
         "region": "hill-top",
         "time": 94,
-        "heart": "123",
-        "speed": "12",
-        "elevation": "1286"
+        "heart": "125",
+        "speed": "10",
+        "elevation": "1212"
       },
       "type": "Feature",
       "geometry": {
@@ -1619,9 +1619,9 @@
       "properties": {
         "region": "hill-top",
         "time": 95,
-        "heart": "128",
-        "speed": "11",
-        "elevation": "1108"
+        "heart": "124",
+        "speed": "10",
+        "elevation": "1225"
       },
       "type": "Feature",
       "geometry": {
@@ -1637,8 +1637,8 @@
         "region": "hill-top",
         "time": 96,
         "heart": "129",
-        "speed": "11",
-        "elevation": "1194"
+        "speed": "12",
+        "elevation": "1212"
       },
       "type": "Feature",
       "geometry": {
@@ -1653,9 +1653,9 @@
       "properties": {
         "region": "hill-top",
         "time": 97,
-        "heart": "128",
-        "speed": "10",
-        "elevation": "1187"
+        "heart": "129",
+        "speed": "11",
+        "elevation": "1161"
       },
       "type": "Feature",
       "geometry": {
@@ -1670,9 +1670,9 @@
       "properties": {
         "region": "hill-top",
         "time": 98,
-        "heart": "121",
+        "heart": "124",
         "speed": "12",
-        "elevation": "1245"
+        "elevation": "1281"
       },
       "type": "Feature",
       "geometry": {
@@ -1687,9 +1687,9 @@
       "properties": {
         "region": "hill-top",
         "time": 99,
-        "heart": "124",
-        "speed": "12",
-        "elevation": "1194"
+        "heart": "120",
+        "speed": "11",
+        "elevation": "1094"
       },
       "type": "Feature",
       "geometry": {
@@ -1704,9 +1704,9 @@
       "properties": {
         "region": "hill-top",
         "time": 100,
-        "heart": "121",
+        "heart": "127",
         "speed": "11",
-        "elevation": "1286"
+        "elevation": "1090"
       },
       "type": "Feature",
       "geometry": {
@@ -1721,9 +1721,9 @@
       "properties": {
         "region": "hill-top",
         "time": 101,
-        "heart": "125",
-        "speed": "10",
-        "elevation": "1225"
+        "heart": "120",
+        "speed": "12",
+        "elevation": "1169"
       },
       "type": "Feature",
       "geometry": {
@@ -1738,9 +1738,9 @@
       "properties": {
         "region": "hill-top",
         "time": 102,
-        "heart": "126",
-        "speed": "12",
-        "elevation": "1142"
+        "heart": "123",
+        "speed": "11",
+        "elevation": "1109"
       },
       "type": "Feature",
       "geometry": {
@@ -1755,9 +1755,9 @@
       "properties": {
         "region": "hill-top",
         "time": 103,
-        "heart": "125",
-        "speed": "12",
-        "elevation": "1173"
+        "heart": "122",
+        "speed": "10",
+        "elevation": "1227"
       },
       "type": "Feature",
       "geometry": {
@@ -1772,9 +1772,9 @@
       "properties": {
         "region": "hill-top",
         "time": 104,
-        "heart": "127",
-        "speed": "10",
-        "elevation": "1136"
+        "heart": "120",
+        "speed": "11",
+        "elevation": "1170"
       },
       "type": "Feature",
       "geometry": {
@@ -1789,9 +1789,9 @@
       "properties": {
         "region": "hill-top",
         "time": 105,
-        "heart": "126",
-        "speed": "12",
-        "elevation": "1271"
+        "heart": "125",
+        "speed": "10",
+        "elevation": "1050"
       },
       "type": "Feature",
       "geometry": {
@@ -1806,9 +1806,9 @@
       "properties": {
         "region": "hill-top",
         "time": 106,
-        "heart": "127",
+        "heart": "128",
         "speed": "11",
-        "elevation": "1050"
+        "elevation": "1072"
       },
       "type": "Feature",
       "geometry": {
@@ -1823,9 +1823,9 @@
       "properties": {
         "region": "hill-top",
         "time": 107,
-        "heart": "127",
+        "heart": "121",
         "speed": "11",
-        "elevation": "1113"
+        "elevation": "1282"
       },
       "type": "Feature",
       "geometry": {
@@ -1840,9 +1840,9 @@
       "properties": {
         "region": "hill-top",
         "time": 108,
-        "heart": "126",
+        "heart": "128",
         "speed": "10",
-        "elevation": "1210"
+        "elevation": "1080"
       },
       "type": "Feature",
       "geometry": {
@@ -1858,8 +1858,8 @@
         "region": "hill-top",
         "time": 109,
         "heart": "124",
-        "speed": "12",
-        "elevation": "1299"
+        "speed": "10",
+        "elevation": "1264"
       },
       "type": "Feature",
       "geometry": {
@@ -1874,9 +1874,9 @@
       "properties": {
         "region": "hill-top",
         "time": 110,
-        "heart": "128",
-        "speed": "12",
-        "elevation": "1087"
+        "heart": "129",
+        "speed": "10",
+        "elevation": "1094"
       },
       "type": "Feature",
       "geometry": {
@@ -1891,9 +1891,9 @@
       "properties": {
         "region": "hill-top",
         "time": 111,
-        "heart": "122",
-        "speed": "12",
-        "elevation": "1091"
+        "heart": "120",
+        "speed": "11",
+        "elevation": "1152"
       },
       "type": "Feature",
       "geometry": {
@@ -1908,9 +1908,9 @@
       "properties": {
         "region": "hill-top",
         "time": 112,
-        "heart": "128",
-        "speed": "11",
-        "elevation": "1299"
+        "heart": "125",
+        "speed": "10",
+        "elevation": "1126"
       },
       "type": "Feature",
       "geometry": {
@@ -1925,9 +1925,9 @@
       "properties": {
         "region": "hill-top",
         "time": 113,
-        "heart": "126",
+        "heart": "127",
         "speed": "12",
-        "elevation": "1073"
+        "elevation": "1085"
       },
       "type": "Feature",
       "geometry": {
@@ -1942,9 +1942,9 @@
       "properties": {
         "region": "hill-top",
         "time": 114,
-        "heart": "123",
+        "heart": "124",
         "speed": "12",
-        "elevation": "1217"
+        "elevation": "1236"
       },
       "type": "Feature",
       "geometry": {
@@ -1959,9 +1959,9 @@
       "properties": {
         "region": "hill-top",
         "time": 115,
-        "heart": "120",
+        "heart": "126",
         "speed": "10",
-        "elevation": "1278"
+        "elevation": "1258"
       },
       "type": "Feature",
       "geometry": {
@@ -1976,9 +1976,9 @@
       "properties": {
         "region": "hill-top",
         "time": 116,
-        "heart": "122",
+        "heart": "126",
         "speed": "11",
-        "elevation": "1094"
+        "elevation": "1157"
       },
       "type": "Feature",
       "geometry": {
@@ -1993,9 +1993,9 @@
       "properties": {
         "region": "hill-top",
         "time": 117,
-        "heart": "126",
+        "heart": "120",
         "speed": "11",
-        "elevation": "1213"
+        "elevation": "1186"
       },
       "type": "Feature",
       "geometry": {
@@ -2012,7 +2012,7 @@
         "time": 118,
         "heart": "124",
         "speed": "12",
-        "elevation": "1184"
+        "elevation": "1233"
       },
       "type": "Feature",
       "geometry": {
@@ -2027,9 +2027,9 @@
       "properties": {
         "region": "hill-top",
         "time": 119,
-        "heart": "125",
-        "speed": "11",
-        "elevation": "1273"
+        "heart": "121",
+        "speed": "12",
+        "elevation": "1071"
       },
       "type": "Feature",
       "geometry": {
@@ -2045,8 +2045,8 @@
         "region": "hill-top",
         "time": 120,
         "heart": "123",
-        "speed": "10",
-        "elevation": "1069"
+        "speed": "12",
+        "elevation": "1236"
       },
       "type": "Feature",
       "geometry": {
@@ -2061,9 +2061,9 @@
       "properties": {
         "region": "hill-top",
         "time": 121,
-        "heart": "120",
-        "speed": "12",
-        "elevation": "1093"
+        "heart": "128",
+        "speed": "11",
+        "elevation": "1095"
       },
       "type": "Feature",
       "geometry": {
@@ -2078,9 +2078,9 @@
       "properties": {
         "region": "hill-top",
         "time": 122,
-        "heart": "128",
-        "speed": "11",
-        "elevation": "1178"
+        "heart": "127",
+        "speed": "10",
+        "elevation": "1291"
       },
       "type": "Feature",
       "geometry": {
@@ -2095,9 +2095,9 @@
       "properties": {
         "region": "hill-top",
         "time": 123,
-        "heart": "129",
-        "speed": "11",
-        "elevation": "1249"
+        "heart": "126",
+        "speed": "10",
+        "elevation": "1065"
       },
       "type": "Feature",
       "geometry": {
@@ -2112,9 +2112,9 @@
       "properties": {
         "region": "hill-top",
         "time": 124,
-        "heart": "125",
-        "speed": "12",
-        "elevation": "1052"
+        "heart": "123",
+        "speed": "11",
+        "elevation": "1137"
       },
       "type": "Feature",
       "geometry": {
@@ -2129,9 +2129,9 @@
       "properties": {
         "region": "hill-top",
         "time": 125,
-        "heart": "127",
-        "speed": "12",
-        "elevation": "1194"
+        "heart": "123",
+        "speed": "10",
+        "elevation": "1255"
       },
       "type": "Feature",
       "geometry": {
@@ -2146,9 +2146,9 @@
       "properties": {
         "region": "hill-top",
         "time": 126,
-        "heart": "124",
+        "heart": "120",
         "speed": "12",
-        "elevation": "1062"
+        "elevation": "1166"
       },
       "type": "Feature",
       "geometry": {
@@ -2163,9 +2163,9 @@
       "properties": {
         "region": "hill-top",
         "time": 127,
-        "heart": "121",
+        "heart": "125",
         "speed": "12",
-        "elevation": "1275"
+        "elevation": "1133"
       },
       "type": "Feature",
       "geometry": {
@@ -2180,9 +2180,9 @@
       "properties": {
         "region": "hill-top",
         "time": 128,
-        "heart": "120",
-        "speed": "10",
-        "elevation": "1088"
+        "heart": "122",
+        "speed": "11",
+        "elevation": "1249"
       },
       "type": "Feature",
       "geometry": {
@@ -2197,9 +2197,9 @@
       "properties": {
         "region": "hill-top",
         "time": 129,
-        "heart": "125",
-        "speed": "12",
-        "elevation": "1243"
+        "heart": "129",
+        "speed": "11",
+        "elevation": "1273"
       },
       "type": "Feature",
       "geometry": {
@@ -2214,9 +2214,9 @@
       "properties": {
         "region": "hill-top",
         "time": 130,
-        "heart": "128",
+        "heart": "120",
         "speed": "10",
-        "elevation": "1086"
+        "elevation": "1252"
       },
       "type": "Feature",
       "geometry": {
@@ -2231,9 +2231,9 @@
       "properties": {
         "region": "hill-top",
         "time": 131,
-        "heart": "129",
-        "speed": "11",
-        "elevation": "1105"
+        "heart": "122",
+        "speed": "10",
+        "elevation": "1128"
       },
       "type": "Feature",
       "geometry": {
@@ -2248,9 +2248,9 @@
       "properties": {
         "region": "hill-top",
         "time": 132,
-        "heart": "127",
+        "heart": "126",
         "speed": "11",
-        "elevation": "1105"
+        "elevation": "1156"
       },
       "type": "Feature",
       "geometry": {
@@ -2267,7 +2267,7 @@
         "time": 133,
         "heart": "128",
         "speed": "10",
-        "elevation": "1138"
+        "elevation": "1200"
       },
       "type": "Feature",
       "geometry": {
@@ -2282,9 +2282,9 @@
       "properties": {
         "region": "hill-top",
         "time": 134,
-        "heart": "124",
+        "heart": "123",
         "speed": "12",
-        "elevation": "1055"
+        "elevation": "1181"
       },
       "type": "Feature",
       "geometry": {
@@ -2299,9 +2299,9 @@
       "properties": {
         "region": "hill-top",
         "time": 135,
-        "heart": "126",
+        "heart": "123",
         "speed": "11",
-        "elevation": "1202"
+        "elevation": "1192"
       },
       "type": "Feature",
       "geometry": {
@@ -2316,9 +2316,9 @@
       "properties": {
         "region": "hill-top",
         "time": 136,
-        "heart": "125",
-        "speed": "12",
-        "elevation": "1206"
+        "heart": "124",
+        "speed": "10",
+        "elevation": "1062"
       },
       "type": "Feature",
       "geometry": {
@@ -2333,7 +2333,7 @@
       "properties": {
         "region": "hill-fall",
         "time": 137,
-        "heart": "111",
+        "heart": "117",
         "speed": "29",
         "elevation": "1020"
       },
@@ -2350,8 +2350,8 @@
       "properties": {
         "region": "hill-fall",
         "time": 138,
-        "heart": "110",
-        "speed": "27",
+        "heart": "116",
+        "speed": "29",
         "elevation": "990"
       },
       "type": "Feature",
@@ -2367,8 +2367,8 @@
       "properties": {
         "region": "hill-fall",
         "time": 139,
-        "heart": "111",
-        "speed": "29",
+        "heart": "119",
+        "speed": "27",
         "elevation": "960"
       },
       "type": "Feature",
@@ -2384,8 +2384,8 @@
       "properties": {
         "region": "hill-fall",
         "time": 140,
-        "heart": "112",
-        "speed": "25",
+        "heart": "116",
+        "speed": "29",
         "elevation": "930"
       },
       "type": "Feature",
@@ -2402,7 +2402,7 @@
         "region": "hill-fall",
         "time": 141,
         "heart": "111",
-        "speed": "26",
+        "speed": "25",
         "elevation": "900"
       },
       "type": "Feature",
@@ -2418,8 +2418,8 @@
       "properties": {
         "region": "hill-fall",
         "time": 142,
-        "heart": "110",
-        "speed": "26",
+        "heart": "119",
+        "speed": "27",
         "elevation": "870"
       },
       "type": "Feature",
@@ -2435,8 +2435,8 @@
       "properties": {
         "region": "hill-fall",
         "time": 143,
-        "heart": "114",
-        "speed": "25",
+        "heart": "117",
+        "speed": "29",
         "elevation": "840"
       },
       "type": "Feature",
@@ -2452,7 +2452,7 @@
       "properties": {
         "region": "hill-fall",
         "time": 144,
-        "heart": "114",
+        "heart": "116",
         "speed": "25",
         "elevation": "810"
       },
@@ -2470,7 +2470,7 @@
         "region": "hill-fall",
         "time": 145,
         "heart": "114",
-        "speed": "28",
+        "speed": "26",
         "elevation": "780"
       },
       "type": "Feature",
@@ -2486,7 +2486,7 @@
       "properties": {
         "region": "hill-fall",
         "time": 146,
-        "heart": "117",
+        "heart": "111",
         "speed": "27",
         "elevation": "750"
       },
@@ -2503,8 +2503,8 @@
       "properties": {
         "region": "hill-fall",
         "time": 147,
-        "heart": "112",
-        "speed": "26",
+        "heart": "116",
+        "speed": "28",
         "elevation": "720"
       },
       "type": "Feature",
@@ -2520,8 +2520,8 @@
       "properties": {
         "region": "hill-fall",
         "time": 148,
-        "heart": "111",
-        "speed": "25",
+        "heart": "114",
+        "speed": "28",
         "elevation": "690"
       },
       "type": "Feature",
@@ -2537,8 +2537,8 @@
       "properties": {
         "region": "hill-fall",
         "time": 149,
-        "heart": "112",
-        "speed": "25",
+        "heart": "111",
+        "speed": "28",
         "elevation": "660"
       },
       "type": "Feature",
@@ -2554,8 +2554,8 @@
       "properties": {
         "region": "hill-fall",
         "time": 150,
-        "heart": "119",
-        "speed": "25",
+        "heart": "114",
+        "speed": "29",
         "elevation": "630"
       },
       "type": "Feature",
@@ -2571,8 +2571,8 @@
       "properties": {
         "region": "hill-fall",
         "time": 151,
-        "heart": "112",
-        "speed": "29",
+        "heart": "111",
+        "speed": "26",
         "elevation": "600"
       },
       "type": "Feature",
@@ -2588,8 +2588,8 @@
       "properties": {
         "region": "hill-fall",
         "time": 152,
-        "heart": "116",
-        "speed": "25",
+        "heart": "117",
+        "speed": "28",
         "elevation": "570"
       },
       "type": "Feature",
@@ -2605,8 +2605,8 @@
       "properties": {
         "region": "hill-fall",
         "time": 153,
-        "heart": "115",
-        "speed": "27",
+        "heart": "119",
+        "speed": "28",
         "elevation": "540"
       },
       "type": "Feature",
@@ -2622,8 +2622,8 @@
       "properties": {
         "region": "hollywood",
         "time": 154,
-        "heart": "143",
-        "speed": "17",
+        "heart": "142",
+        "speed": "15",
         "elevation": "392"
       },
       "type": "Feature",
@@ -2639,8 +2639,8 @@
       "properties": {
         "region": "hollywood",
         "time": 155,
-        "heart": "143",
-        "speed": "17",
+        "heart": "149",
+        "speed": "16",
         "elevation": "384"
       },
       "type": "Feature",
@@ -2656,8 +2656,8 @@
       "properties": {
         "region": "hollywood",
         "time": 156,
-        "heart": "148",
-        "speed": "15",
+        "heart": "143",
+        "speed": "17",
         "elevation": "376"
       },
       "type": "Feature",
@@ -2673,8 +2673,8 @@
       "properties": {
         "region": "hollywood",
         "time": 157,
-        "heart": "149",
-        "speed": "16",
+        "heart": "140",
+        "speed": "17",
         "elevation": "368"
       },
       "type": "Feature",
@@ -2690,8 +2690,8 @@
       "properties": {
         "region": "hollywood",
         "time": 158,
-        "heart": "144",
-        "speed": "17",
+        "heart": "149",
+        "speed": "15",
         "elevation": "360"
       },
       "type": "Feature",
@@ -2707,7 +2707,7 @@
       "properties": {
         "region": "hollywood",
         "time": 159,
-        "heart": "146",
+        "heart": "143",
         "speed": "15",
         "elevation": "352"
       },
@@ -2724,8 +2724,8 @@
       "properties": {
         "region": "hollywood",
         "time": 160,
-        "heart": "146",
-        "speed": "17",
+        "heart": "149",
+        "speed": "16",
         "elevation": "344"
       },
       "type": "Feature",
@@ -2741,8 +2741,8 @@
       "properties": {
         "region": "hollywood",
         "time": 161,
-        "heart": "143",
-        "speed": "16",
+        "heart": "144",
+        "speed": "17",
         "elevation": "336"
       },
       "type": "Feature",
@@ -2758,7 +2758,7 @@
       "properties": {
         "region": "hollywood",
         "time": 162,
-        "heart": "145",
+        "heart": "144",
         "speed": "17",
         "elevation": "328"
       },
@@ -2775,7 +2775,7 @@
       "properties": {
         "region": "hollywood",
         "time": 163,
-        "heart": "140",
+        "heart": "149",
         "speed": "15",
         "elevation": "320"
       },
@@ -2792,8 +2792,8 @@
       "properties": {
         "region": "hollywood",
         "time": 164,
-        "heart": "146",
-        "speed": "16",
+        "heart": "149",
+        "speed": "15",
         "elevation": "312"
       },
       "type": "Feature",
@@ -2809,8 +2809,8 @@
       "properties": {
         "region": "hollywood",
         "time": 165,
-        "heart": "141",
-        "speed": "15",
+        "heart": "147",
+        "speed": "16",
         "elevation": "304"
       },
       "type": "Feature",
@@ -2826,7 +2826,7 @@
       "properties": {
         "region": "hollywood",
         "time": 166,
-        "heart": "141",
+        "heart": "143",
         "speed": "16",
         "elevation": "296"
       },
@@ -2843,8 +2843,8 @@
       "properties": {
         "region": "hollywood",
         "time": 167,
-        "heart": "140",
-        "speed": "16",
+        "heart": "141",
+        "speed": "15",
         "elevation": "288"
       },
       "type": "Feature",
@@ -2860,8 +2860,8 @@
       "properties": {
         "region": "hollywood",
         "time": 168,
-        "heart": "144",
-        "speed": "16",
+        "heart": "147",
+        "speed": "15",
         "elevation": "280"
       },
       "type": "Feature",
@@ -2878,7 +2878,7 @@
         "region": "hollywood",
         "time": 169,
         "heart": "141",
-        "speed": "16",
+        "speed": "15",
         "elevation": "272"
       },
       "type": "Feature",
@@ -2895,7 +2895,7 @@
         "region": "hollywood",
         "time": 170,
         "heart": "148",
-        "speed": "17",
+        "speed": "15",
         "elevation": "264"
       },
       "type": "Feature",
@@ -2911,7 +2911,7 @@
       "properties": {
         "region": "hollywood",
         "time": 171,
-        "heart": "148",
+        "heart": "149",
         "speed": "15",
         "elevation": "256"
       },
@@ -2928,8 +2928,8 @@
       "properties": {
         "region": "hollywood",
         "time": 172,
-        "heart": "140",
-        "speed": "17",
+        "heart": "149",
+        "speed": "16",
         "elevation": "248"
       },
       "type": "Feature",
@@ -2945,7 +2945,7 @@
       "properties": {
         "region": "hollywood",
         "time": 173,
-        "heart": "147",
+        "heart": "148",
         "speed": "16",
         "elevation": "240"
       },
@@ -2962,8 +2962,8 @@
       "properties": {
         "region": "hollywood",
         "time": 174,
-        "heart": "140",
-        "speed": "16",
+        "heart": "141",
+        "speed": "17",
         "elevation": "232"
       },
       "type": "Feature",
@@ -2979,8 +2979,8 @@
       "properties": {
         "region": "hollywood",
         "time": 175,
-        "heart": "149",
-        "speed": "16",
+        "heart": "142",
+        "speed": "15",
         "elevation": "224"
       },
       "type": "Feature",
@@ -2997,7 +2997,7 @@
         "region": "hollywood",
         "time": 176,
         "heart": "145",
-        "speed": "15",
+        "speed": "16",
         "elevation": "216"
       },
       "type": "Feature",
@@ -3013,8 +3013,8 @@
       "properties": {
         "region": "hollywood",
         "time": 177,
-        "heart": "142",
-        "speed": "17",
+        "heart": "149",
+        "speed": "15",
         "elevation": "208"
       },
       "type": "Feature",
@@ -3030,8 +3030,8 @@
       "properties": {
         "region": "hollywood",
         "time": 178,
-        "heart": "142",
-        "speed": "17",
+        "heart": "145",
+        "speed": "15",
         "elevation": "200"
       },
       "type": "Feature",
@@ -3047,7 +3047,7 @@
       "properties": {
         "region": "hollywood",
         "time": 179,
-        "heart": "144",
+        "heart": "141",
         "speed": "17",
         "elevation": "192"
       },
@@ -3064,8 +3064,8 @@
       "properties": {
         "region": "hollywood",
         "time": 180,
-        "heart": "141",
-        "speed": "16",
+        "heart": "149",
+        "speed": "17",
         "elevation": "184"
       },
       "type": "Feature",
@@ -3081,8 +3081,8 @@
       "properties": {
         "region": "hollywood",
         "time": 181,
-        "heart": "142",
-        "speed": "15",
+        "heart": "143",
+        "speed": "16",
         "elevation": "176"
       },
       "type": "Feature",
@@ -3098,8 +3098,8 @@
       "properties": {
         "region": "hollywood",
         "time": 182,
-        "heart": "145",
-        "speed": "15",
+        "heart": "149",
+        "speed": "16",
         "elevation": "168"
       },
       "type": "Feature",
@@ -3115,8 +3115,8 @@
       "properties": {
         "region": "hollywood",
         "time": 183,
-        "heart": "148",
-        "speed": "17",
+        "heart": "143",
+        "speed": "15",
         "elevation": "160"
       },
       "type": "Feature",
@@ -3132,8 +3132,8 @@
       "properties": {
         "region": "hollywood",
         "time": 184,
-        "heart": "140",
-        "speed": "15",
+        "heart": "145",
+        "speed": "17",
         "elevation": "152"
       },
       "type": "Feature",
@@ -3149,8 +3149,8 @@
       "properties": {
         "region": "hollywood",
         "time": 185,
-        "heart": "149",
-        "speed": "15",
+        "heart": "141",
+        "speed": "16",
         "elevation": "144"
       },
       "type": "Feature",
@@ -3166,8 +3166,8 @@
       "properties": {
         "region": "hollywood",
         "time": 186,
-        "heart": "149",
-        "speed": "16",
+        "heart": "146",
+        "speed": "15",
         "elevation": "136"
       },
       "type": "Feature",
@@ -3183,8 +3183,8 @@
       "properties": {
         "region": "hollywood",
         "time": 187,
-        "heart": "140",
-        "speed": "15",
+        "heart": "145",
+        "speed": "16",
         "elevation": "128"
       },
       "type": "Feature",
@@ -3200,8 +3200,8 @@
       "properties": {
         "region": "hollywood",
         "time": 188,
-        "heart": "140",
-        "speed": "16",
+        "heart": "148",
+        "speed": "15",
         "elevation": "120"
       },
       "type": "Feature",
@@ -3218,7 +3218,7 @@
         "region": "hollywood",
         "time": 189,
         "heart": "145",
-        "speed": "15",
+        "speed": "16",
         "elevation": "112"
       },
       "type": "Feature",
@@ -3234,7 +3234,7 @@
       "properties": {
         "region": "hollywood",
         "time": 190,
-        "heart": "148",
+        "heart": "141",
         "speed": "15",
         "elevation": "104"
       },
@@ -3251,8 +3251,8 @@
       "properties": {
         "region": "hollywood",
         "time": 191,
-        "heart": "140",
-        "speed": "15",
+        "heart": "148",
+        "speed": "17",
         "elevation": "96"
       },
       "type": "Feature",
@@ -3268,8 +3268,8 @@
       "properties": {
         "region": "hollywood",
         "time": 192,
-        "heart": "142",
-        "speed": "15",
+        "heart": "140",
+        "speed": "16",
         "elevation": "88"
       },
       "type": "Feature",
@@ -3287,7 +3287,7 @@
         "time": 193,
         "heart": "145",
         "speed": "17",
-        "elevation": "210"
+        "elevation": "221"
       },
       "type": "Feature",
       "geometry": {
@@ -3302,9 +3302,9 @@
       "properties": {
         "region": "downtown",
         "time": 194,
-        "heart": "146",
+        "heart": "147",
         "speed": "16",
-        "elevation": "231"
+        "elevation": "249"
       },
       "type": "Feature",
       "geometry": {
@@ -3319,9 +3319,9 @@
       "properties": {
         "region": "downtown",
         "time": 195,
-        "heart": "145",
+        "heart": "148",
         "speed": "15",
-        "elevation": "248"
+        "elevation": "219"
       },
       "type": "Feature",
       "geometry": {
@@ -3336,9 +3336,9 @@
       "properties": {
         "region": "downtown",
         "time": 196,
-        "heart": "146",
-        "speed": "15",
-        "elevation": "211"
+        "heart": "145",
+        "speed": "16",
+        "elevation": "206"
       },
       "type": "Feature",
       "geometry": {
@@ -3353,9 +3353,9 @@
       "properties": {
         "region": "downtown",
         "time": 197,
-        "heart": "145",
-        "speed": "15",
-        "elevation": "226"
+        "heart": "149",
+        "speed": "16",
+        "elevation": "232"
       },
       "type": "Feature",
       "geometry": {
@@ -3370,9 +3370,9 @@
       "properties": {
         "region": "downtown",
         "time": 198,
-        "heart": "148",
+        "heart": "146",
         "speed": "16",
-        "elevation": "248"
+        "elevation": "206"
       },
       "type": "Feature",
       "geometry": {
@@ -3387,9 +3387,9 @@
       "properties": {
         "region": "downtown",
         "time": 199,
-        "heart": "148",
-        "speed": "17",
-        "elevation": "205"
+        "heart": "146",
+        "speed": "15",
+        "elevation": "213"
       },
       "type": "Feature",
       "geometry": {
@@ -3404,9 +3404,9 @@
       "properties": {
         "region": "downtown",
         "time": 200,
-        "heart": "148",
+        "heart": "145",
         "speed": "17",
-        "elevation": "216"
+        "elevation": "228"
       },
       "type": "Feature",
       "geometry": {
@@ -3421,9 +3421,9 @@
       "properties": {
         "region": "downtown",
         "time": 201,
-        "heart": "147",
+        "heart": "145",
         "speed": "15",
-        "elevation": "239"
+        "elevation": "223"
       },
       "type": "Feature",
       "geometry": {
@@ -3438,9 +3438,9 @@
       "properties": {
         "region": "downtown",
         "time": 202,
-        "heart": "147",
-        "speed": "17",
-        "elevation": "220"
+        "heart": "148",
+        "speed": "15",
+        "elevation": "245"
       },
       "type": "Feature",
       "geometry": {
@@ -3456,8 +3456,8 @@
         "region": "downtown",
         "time": 203,
         "heart": "146",
-        "speed": "16",
-        "elevation": "225"
+        "speed": "17",
+        "elevation": "231"
       },
       "type": "Feature",
       "geometry": {
@@ -3472,9 +3472,9 @@
       "properties": {
         "region": "freeway-on",
         "time": 204,
-        "heart": "151",
-        "speed": "31",
-        "elevation": "369"
+        "heart": "153",
+        "speed": "32",
+        "elevation": "226"
       },
       "type": "Feature",
       "geometry": {
@@ -3489,9 +3489,9 @@
       "properties": {
         "region": "freeway-on",
         "time": 205,
-        "heart": "151",
-        "speed": "32",
-        "elevation": "244"
+        "heart": "154",
+        "speed": "31",
+        "elevation": "373"
       },
       "type": "Feature",
       "geometry": {
@@ -3506,9 +3506,9 @@
       "properties": {
         "region": "freeway-on",
         "time": 206,
-        "heart": "153",
+        "heart": "152",
         "speed": "31",
-        "elevation": "296"
+        "elevation": "376"
       },
       "type": "Feature",
       "geometry": {
@@ -3523,9 +3523,9 @@
       "properties": {
         "region": "freeway-on",
         "time": 207,
-        "heart": "153",
+        "heart": "151",
         "speed": "31",
-        "elevation": "286"
+        "elevation": "248"
       },
       "type": "Feature",
       "geometry": {
@@ -3542,7 +3542,7 @@
         "time": 208,
         "heart": "150",
         "speed": "30",
-        "elevation": "336"
+        "elevation": "282"
       },
       "type": "Feature",
       "geometry": {
@@ -3558,8 +3558,8 @@
         "region": "freeway-on",
         "time": 209,
         "heart": "151",
-        "speed": "30",
-        "elevation": "383"
+        "speed": "31",
+        "elevation": "291"
       },
       "type": "Feature",
       "geometry": {
@@ -3574,9 +3574,9 @@
       "properties": {
         "region": "freeway-on",
         "time": 210,
-        "heart": "154",
-        "speed": "32",
-        "elevation": "292"
+        "heart": "153",
+        "speed": "30",
+        "elevation": "346"
       },
       "type": "Feature",
       "geometry": {
@@ -3591,9 +3591,9 @@
       "properties": {
         "region": "freeway-on",
         "time": 211,
-        "heart": "152",
-        "speed": "31",
-        "elevation": "369"
+        "heart": "150",
+        "speed": "32",
+        "elevation": "239"
       },
       "type": "Feature",
       "geometry": {
@@ -3608,9 +3608,9 @@
       "properties": {
         "region": "freeway-on",
         "time": 212,
-        "heart": "153",
+        "heart": "150",
         "speed": "31",
-        "elevation": "238"
+        "elevation": "230"
       },
       "type": "Feature",
       "geometry": {
@@ -3625,9 +3625,9 @@
       "properties": {
         "region": "freeway-on",
         "time": 213,
-        "heart": "150",
-        "speed": "32",
-        "elevation": "255"
+        "heart": "151",
+        "speed": "31",
+        "elevation": "349"
       },
       "type": "Feature",
       "geometry": {
@@ -3642,9 +3642,9 @@
       "properties": {
         "region": "freeway-on",
         "time": 214,
-        "heart": "154",
+        "heart": "151",
         "speed": "30",
-        "elevation": "258"
+        "elevation": "248"
       },
       "type": "Feature",
       "geometry": {
@@ -3659,9 +3659,9 @@
       "properties": {
         "region": "freeway-on",
         "time": 215,
-        "heart": "150",
+        "heart": "151",
         "speed": "31",
-        "elevation": "335"
+        "elevation": "384"
       },
       "type": "Feature",
       "geometry": {
@@ -3676,9 +3676,9 @@
       "properties": {
         "region": "freeway-on",
         "time": 216,
-        "heart": "152",
-        "speed": "30",
-        "elevation": "392"
+        "heart": "150",
+        "speed": "31",
+        "elevation": "335"
       },
       "type": "Feature",
       "geometry": {
@@ -3695,7 +3695,7 @@
         "time": 217,
         "heart": "151",
         "speed": "31",
-        "elevation": "286"
+        "elevation": "376"
       },
       "type": "Feature",
       "geometry": {
@@ -3710,9 +3710,9 @@
       "properties": {
         "region": "freeway-on",
         "time": 218,
-        "heart": "152",
+        "heart": "150",
         "speed": "31",
-        "elevation": "221"
+        "elevation": "274"
       },
       "type": "Feature",
       "geometry": {
@@ -3728,8 +3728,8 @@
         "region": "freeway-off",
         "time": 219,
         "heart": "162",
-        "speed": "22",
-        "elevation": "367"
+        "speed": "21",
+        "elevation": "419"
       },
       "type": "Feature",
       "geometry": {
@@ -3744,9 +3744,9 @@
       "properties": {
         "region": "freeway-off",
         "time": 220,
-        "heart": "161",
-        "speed": "21",
-        "elevation": "415"
+        "heart": "162",
+        "speed": "22",
+        "elevation": "357"
       },
       "type": "Feature",
       "geometry": {
@@ -3761,9 +3761,9 @@
       "properties": {
         "region": "freeway-off",
         "time": 221,
-        "heart": "163",
-        "speed": "22",
-        "elevation": "396"
+        "heart": "161",
+        "speed": "21",
+        "elevation": "358"
       },
       "type": "Feature",
       "geometry": {
@@ -3778,9 +3778,9 @@
       "properties": {
         "region": "freeway-off",
         "time": 222,
-        "heart": "163",
+        "heart": "160",
         "speed": "21",
-        "elevation": "305"
+        "elevation": "345"
       },
       "type": "Feature",
       "geometry": {
@@ -3796,8 +3796,8 @@
         "region": "freeway-off",
         "time": 223,
         "heart": "160",
-        "speed": "21",
-        "elevation": "339"
+        "speed": "22",
+        "elevation": "424"
       },
       "type": "Feature",
       "geometry": {
@@ -3812,9 +3812,9 @@
       "properties": {
         "region": "freeway-off",
         "time": 224,
-        "heart": "160",
-        "speed": "20",
-        "elevation": "421"
+        "heart": "163",
+        "speed": "22",
+        "elevation": "449"
       },
       "type": "Feature",
       "geometry": {
@@ -3829,9 +3829,9 @@
       "properties": {
         "region": "freeway-off",
         "time": 225,
-        "heart": "161",
+        "heart": "163",
         "speed": "21",
-        "elevation": "431"
+        "elevation": "337"
       },
       "type": "Feature",
       "geometry": {
@@ -3846,9 +3846,9 @@
       "properties": {
         "region": "freeway-off",
         "time": 226,
-        "heart": "164",
-        "speed": "22",
-        "elevation": "407"
+        "heart": "160",
+        "speed": "20",
+        "elevation": "428"
       },
       "type": "Feature",
       "geometry": {
@@ -3863,9 +3863,9 @@
       "properties": {
         "region": "freeway-off",
         "time": 227,
-        "heart": "160",
-        "speed": "20",
-        "elevation": "434"
+        "heart": "163",
+        "speed": "21",
+        "elevation": "304"
       },
       "type": "Feature",
       "geometry": {
@@ -3880,9 +3880,9 @@
       "properties": {
         "region": "freeway-off",
         "time": 228,
-        "heart": "163",
+        "heart": "162",
         "speed": "22",
-        "elevation": "438"
+        "elevation": "400"
       },
       "type": "Feature",
       "geometry": {
@@ -3898,8 +3898,8 @@
         "region": "freeway-off",
         "time": 229,
         "heart": "164",
-        "speed": "22",
-        "elevation": "417"
+        "speed": "21",
+        "elevation": "434"
       },
       "type": "Feature",
       "geometry": {
@@ -3914,9 +3914,9 @@
       "properties": {
         "region": "freeway-off",
         "time": 230,
-        "heart": "164",
-        "speed": "22",
-        "elevation": "330"
+        "heart": "163",
+        "speed": "20",
+        "elevation": "366"
       },
       "type": "Feature",
       "geometry": {
@@ -3931,9 +3931,9 @@
       "properties": {
         "region": "freeway-off",
         "time": 231,
-        "heart": "164",
+        "heart": "162",
         "speed": "22",
-        "elevation": "355"
+        "elevation": "326"
       },
       "type": "Feature",
       "geometry": {
@@ -3948,9 +3948,9 @@
       "properties": {
         "region": "freeway-off",
         "time": 232,
-        "heart": "162",
-        "speed": "20",
-        "elevation": "342"
+        "heart": "161",
+        "speed": "21",
+        "elevation": "393"
       },
       "type": "Feature",
       "geometry": {
@@ -3965,9 +3965,9 @@
       "properties": {
         "region": "stadium",
         "time": 233,
-        "heart": "148",
-        "speed": "10",
-        "elevation": "359"
+        "heart": "149",
+        "speed": "12",
+        "elevation": "410"
       },
       "type": "Feature",
       "geometry": {
@@ -3982,9 +3982,9 @@
       "properties": {
         "region": "stadium",
         "time": 234,
-        "heart": "140",
-        "speed": "11",
-        "elevation": "376"
+        "heart": "141",
+        "speed": "10",
+        "elevation": "427"
       },
       "type": "Feature",
       "geometry": {
@@ -3999,9 +3999,9 @@
       "properties": {
         "region": "stadium",
         "time": 235,
-        "heart": "143",
-        "speed": "10",
-        "elevation": "393"
+        "heart": "144",
+        "speed": "12",
+        "elevation": "444"
       },
       "type": "Feature",
       "geometry": {
@@ -4016,9 +4016,9 @@
       "properties": {
         "region": "stadium",
         "time": 236,
-        "heart": "142",
+        "heart": "141",
         "speed": "12",
-        "elevation": "410"
+        "elevation": "461"
       },
       "type": "Feature",
       "geometry": {
@@ -4033,9 +4033,9 @@
       "properties": {
         "region": "stadium",
         "time": 237,
-        "heart": "146",
+        "heart": "143",
         "speed": "11",
-        "elevation": "427"
+        "elevation": "478"
       },
       "type": "Feature",
       "geometry": {
@@ -4050,9 +4050,9 @@
       "properties": {
         "region": "stadium",
         "time": 238,
-        "heart": "145",
-        "speed": "12",
-        "elevation": "444"
+        "heart": "140",
+        "speed": "11",
+        "elevation": "495"
       },
       "type": "Feature",
       "geometry": {
@@ -4067,9 +4067,9 @@
       "properties": {
         "region": "stadium",
         "time": 239,
-        "heart": "144",
-        "speed": "11",
-        "elevation": "461"
+        "heart": "147",
+        "speed": "12",
+        "elevation": "512"
       },
       "type": "Feature",
       "geometry": {

@@ -230,7 +230,6 @@
 			function assignDrawTime(p) {
 			// highest = 32
 			// lowest = 5
-console.log(currentPoint);
 			var dp = featuresdata[currentPoint].properties;
 				if (Math.abs(dp.x - p.x) <=2 && Math.abs(dp.y - p.y) <= 2) {
 					if (currentPoint != 239) currentPoint++;
@@ -243,26 +242,7 @@ console.log(currentPoint);
 				p.s = dp.speed;
 				
 			}
-			
-
-			function calculateDrawTimeFromSpeed(speed) {
-				
-				if (speed < 10) {
-					time += 60;
-				}
-				else if (speed < 15) {
-					time += 45;
-				}
-				else if (speed < 20) {
-					time += 30
-				}
-				else {
-					time += 15;
-				} 
-				
-				return time;
-			}
-						
+									
 
 			
 			function reset() {
@@ -305,7 +285,7 @@ console.log(currentPoint);
 				function showPoint(p) {
 					
 						var dp = featuresdata[currentPoint].properties;
-						if (Math.abs(dp.x - p.x) <= 5 && Math.abs(dp.y - p.y) <= 5) {
+						if (Math.abs(dp.x - p.x) <= 10 && Math.abs(dp.y - p.y) <= 10) {
 							dummyData.push({
 								"time": i++,
 								"heart": dp.heart
@@ -355,15 +335,37 @@ console.log(currentPoint);
 
 			
 			
+		function calculateDrawTimeFromSpeed(speed) {
 			
-		function getRate(s) {
-			if (s < 10) {
-				return 5;
+			if (speed < 10) {
+				time += 40;
+			}
+			else if (speed < 15) {
+				time += 30;
+			}
+			else if (speed < 20) {
+				time += 20
 			}
 			else {
-				 return 2;
+				time += 10;
+			} 
+			
+			return time;
+		}
+		
+		function getRate(speed) {
+				if (speed < 10) {
+					return 2;
 				}
-
+				else if (speed < 15) {
+					return 4;
+				}
+				else if (speed < 20) {
+					return 6;
+				}
+				else {
+					return 8;
+				} 
 		}
 			
 			function mapCoordinatesToView(data) {

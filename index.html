@@ -25,18 +25,19 @@
 		svg {
 			position: relative;
 		}
+		
 		#path1 {
-			fill: yellow;
+		fill:none;
 			stroke-width: 2px;
 			stroke: red;
-			stroke-opacity: 0.5;
+			stroke-opacity: 1;
 		}
 		
 		#path2 {
-			fill: green;
+		fill:none;
 			stroke-width: 2px;
-			stroke: blue;
-			stroke-opacity: 0.5;
+			stroke: black;
+			stroke-opacity: 1;
 		}
 			
 		.travelMarker {
@@ -120,11 +121,15 @@
 			var yAxis = d3.svg.axis()
 				.scale(y)
 				.orient("left");
-				
-			var area = d3.svg.area()
+// 				
+// 			var area = d3.svg.area()
+// 				.x(function(d) {return x(d.time); })
+// 				.y0(areaChartHeight)
+// 				.y1(function(d) { return y(d.heart); });
+
+			var area = d3.svg.line()
 				.x(function(d) {return x(d.time); })
-				.y0(areaChartHeight)
-				.y1(function(d) { return y(d.heart); });
+				.y(function(d) { return y(d.heart); });
 				
 			var areaChartSvg = d3.select("body").append("svg")
 				.attr("width", areaChartWidth + margin.left + margin.right)
@@ -142,12 +147,12 @@
 				
 				var chartPath = areaChartSvg.append("path")
 					.datum(dummyData)
-					.attr("class", "area")
+					.attr("class", "line")
 					.attr("id", "path1");
 					
 				var chartPath2 = areaChartSvg.append("path")
 					.datum(dummyData2)
-					.attr("class", "area")
+					.attr("class", "line")
 					.attr("id", "path2");
 					
 				areaChartSvg.append("g")
@@ -187,9 +192,11 @@
 				for (var i = 0; i < featuresdata2.length; i++) {
 					if (i < 20) {
 						featuresdata2[i].properties.speed = featuresdata2[i].properties.speed - 5;
+						featuresdata2[i].properties.heart = featuresdata2[i].properties.heart - ((Math.random() * 20));
 					}
 					else {
 						featuresdata2[i].properties.speed = featuresdata2[i].properties.speed + 5;
+						featuresdata2[i].properties.heart = parseInt(featuresdata2[i].properties.heart) + ((Math.random() * 20));
 					}
 				}
 					
@@ -208,6 +215,7 @@
 			
 					
 				mapCoordinatesToView(featuresdata);
+								mapCoordinatesToView(featuresdata2);
 				
 				var transform = d3.geo.transform({ point: projectPoint });
 				var d3path = d3.geo.path().projection(transform);
@@ -412,7 +420,7 @@
 							chartPath.attr("d", area);
 							
 							currentPoint++;
-						
+			 			
 
 						}
 					}
@@ -422,18 +430,20 @@
 				setTimeout(function() {
 					marker2.attr("transform", "translate(" + p2.x + "," + p2.y + ")");
 					
-					var dp2 = featuresdata[currentPoint2].properties;
+					var dp2 = featuresdata2[currentPoint2].properties;
 						if (Math.abs(dp2.x - p2.x) <= 10 && Math.abs(dp2.y - p2.y) <= 10) {
 							dummyData2.push({
 								"time": currentPoint2,
 								"heart": dp2.heart
-})
+});
 								currentPoint2++;
 							console.log("2 reaches " + currentPoint2);
+														console.log("2 heart" + dp2.heart);
+							chartPath2.attr("d", area);
 							}
 							
 							
-							chartPath2.attr("d", area);
+
 							
 					
 				}, p2.t);

@@ -92,7 +92,7 @@
 			
 			
 			/*
-			 * Chart
+			 * chart
 			 */
 			 
 			 var margin = { top: 20, right: 20, bottom: 30, left: 50 };
@@ -127,6 +127,8 @@
 				
 				var dummyData = [];
 				 
+				var dummyData2 = [];
+				
 				x.domain([0, 241]);
 				y.domain([40, 220]);
 				
@@ -150,13 +152,32 @@
 					.text("Heart Rate (BPM)");
 					
 			
+			/*
+			 * end chart
+			 */
 			var queue = [];
+			var queue2 = [];
 			
 			var currentPoint = 0;
 						var time = 0;
+						var time2 = 0;
 			d3.json("la_out.json", function(collection) {
 				
 				var featuresdata = collection.features;
+				
+				var featuresdata2 = JSON.parse(JSON.stringify(collection.features));
+				
+				console.log(featuresdata);
+				console.log(featuresdata2);
+				for (var i = 0; i < featuresdata2.length; i++) {
+					if (i < 20) {
+						featuresdata2[i].properties.speed = featuresdata2[i].properties.speed - 10;
+					}
+					else {
+						featuresdata2[i].properties.speed = featuresdata2[i].properties.speed + 10;
+					}
+				}
+					
 				
 				var maxCal = 0;
 				var minCal = 10000;
@@ -169,9 +190,7 @@
 						maxCal = cal;
 					}
 				}
-				
-				console.log("Max = " + maxCal);
-				console.log("Min = " + minCal);
+			
 					
 				mapCoordinatesToView(featuresdata);
 				
@@ -214,6 +233,11 @@
 					.attr("r", 10)
 					.attr("id", "marker")
 					.attr("class", "travelMarker");
+					
+				var marker2 = g.append("circle")
+					.attr("r", 10)
+					.attr("id", "marker2")
+					.attr("class", "travelMarker");
 			
 // 			map.on("viewreset", reset);
 			
@@ -230,27 +254,38 @@
 				for (var i = 1; i <= precision; i++) {
 					var t = i / precision;
 					var p = linePath.node().getPointAtLength(t * l);
-					queue.push(p);
+					
+					var cp1 = {};
+					cp1.x = p.x;
+					cp1.y = p.y;
+					
+					var cp2 = {};
+					cp2.x = p.x;
+					cp2.y = p.y;
+
+					queue.push(cp1);
+					queue2.push(cp2);
+	
 				}
 				
 				currentPoint = 0;
 				for (var i = 0; i < queue.length; i++) {
-					assignDrawTime(queue[i]);
+					assignDrawTimes(queue[i], queue2[i]);
 				}
 				
 				currentPoint = 0;
 				
-				console.log(queue);
 				
 				while (queue.length > 0) {
-					animatePoints(queue.shift());
+					animatePoints(queue.shift(), queue2.shift());
 				}
 			}
 			
-			function assignDrawTime(p) {
+			function assignDrawTimes(p, p2) {
 			// highest = 32
 			// lowest = 5
 			var dp = featuresdata[currentPoint].properties;
+			var dp2 = featuresdata2[currentPoint].properties;
 				if (Math.abs(dp.x - p.x) <=2 && Math.abs(dp.y - p.y) <= 2) {
 					if (currentPoint != 239) currentPoint++;
 				}
@@ -261,6 +296,8 @@
 				p.t = calculateDrawTimeFromSpeed(dp.speed);
 				p.s = dp.speed;
 				
+				p2.t = calculateDrawTime2FromSpeed(dp2.speed);
+				p2.s = dp2.speed;
 			}
 									
 
@@ -315,6 +352,7 @@
 							d3.select(".travelMarker").attr("fill", calorieScale(calculateCaloriesBurned(dp.heart)));
 							d3.select(".c" + currentPoint).style("opacity", 1);
 							chartPath.attr("d", area);
+							
 							currentPoint++;
 						
 
@@ -342,7 +380,7 @@
 						}
 					}	
 						
-			function animatePoints(p) {
+			function animatePoints(p, p2) {
 				setTimeout(function() {
 					marker.attr("transform", "translate(" + p.x + "," + p.y + ")");
 					
@@ -354,6 +392,11 @@
 					}
 					
 				}, p.t);
+				
+				setTimeout(function() {
+					marker2.attr("transform", "translate(" + p2.x + "," + p2.y + ")");
+					
+				}, p2.t);
 			}
 
 			
@@ -374,6 +417,24 @@
 			} 
 			
 			return time;
+		}
+		
+		function calculateDrawTime2FromSpeed(speed) {
+			
+			if (speed < 10) {
+				time2 += 40;
+			}
+			else if (speed < 15) {
+				time2 += 30;
+			}
+			else if (speed < 20) {
+				time2 += 20
+			}
+			else {
+				time2 += 10;
+			} 
+			
+			return time2;
 		}
 		
 		function getRate(speed) {

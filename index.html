@@ -25,12 +25,20 @@
 		svg {
 			position: relative;
 		}
-		path {
+		#path1 {
 			fill: yellow;
 			stroke-width: 2px;
 			stroke: red;
-			stroke-opacity: 1;
+			stroke-opacity: 0.5;
 		}
+		
+		#path2 {
+			fill: green;
+			stroke-width: 2px;
+			stroke: blue;
+			stroke-opacity: 0.5;
+		}
+			
 		.travelMarker {
 			opacity: 0.75;
 		}
@@ -134,7 +142,13 @@
 				
 				var chartPath = areaChartSvg.append("path")
 					.datum(dummyData)
-					.attr("class", "area");
+					.attr("class", "area")
+					.attr("id", "path1");
+					
+				var chartPath2 = areaChartSvg.append("path")
+					.datum(dummyData2)
+					.attr("class", "area")
+					.attr("id", "path2");
 					
 				areaChartSvg.append("g")
 					.attr("class", "x axis")
@@ -159,6 +173,7 @@
 			var queue2 = [];
 			
 			var currentPoint = 0;
+			var currentPoint2 = 0;
 						var time = 0;
 						var time2 = 0;
 			d3.json("la_out.json", function(collection) {
@@ -171,10 +186,10 @@
 				console.log(featuresdata2);
 				for (var i = 0; i < featuresdata2.length; i++) {
 					if (i < 20) {
-						featuresdata2[i].properties.speed = featuresdata2[i].properties.speed - 10;
+						featuresdata2[i].properties.speed = featuresdata2[i].properties.speed - 5;
 					}
 					else {
-						featuresdata2[i].properties.speed = featuresdata2[i].properties.speed + 10;
+						featuresdata2[i].properties.speed = featuresdata2[i].properties.speed + 5;
 					}
 				}
 					
@@ -274,6 +289,7 @@
 				}
 				
 				currentPoint = 0;
+				currentPoint2 = 0;
 				
 				
 				while (queue.length > 0) {
@@ -282,12 +298,16 @@
 			}
 			
 			function assignDrawTimes(p, p2) {
-			// highest = 32
-			// lowest = 5
-			var dp = featuresdata[currentPoint].properties;
-			var dp2 = featuresdata2[currentPoint].properties;
+				// highest = 32
+				// lowest = 5
+				var dp = featuresdata[currentPoint].properties;
+				var dp2 = featuresdata2[currentPoint].properties;
 				if (Math.abs(dp.x - p.x) <=2 && Math.abs(dp.y - p.y) <= 2) {
-					if (currentPoint != 239) currentPoint++;
+					if (currentPoint != 239) {
+					 currentPoint++;
+					}
+					else {
+					}
 				}
 				else {
 					
@@ -296,6 +316,16 @@
 				p.t = calculateDrawTimeFromSpeed(dp.speed);
 				p.s = dp.speed;
 				
+				var dp2 = featuresdata2[currentPoint2].properties;
+				if (Math.abs(dp.x - p.x) <=2 && Math.abs(dp.y - p.y) <= 2) {
+					if (currentPoint2 != 239) {
+						currentPoint2++;
+					} else {
+					}
+				}
+				else {
+					
+				}
 				p2.t = calculateDrawTime2FromSpeed(dp2.speed);
 				p2.s = dp2.speed;
 			}
@@ -339,28 +369,6 @@
 					this.stream.point(point.x, point.y);
 				}
 				
-				function showPoint(p) {
-					
-						var dp = featuresdata[currentPoint].properties;
-						if (Math.abs(dp.x - p.x) <= 10 && Math.abs(dp.y - p.y) <= 10) {
-							dummyData.push({
-								"time": i++,
-								"heart": dp.heart
-							});
-							
-							setHeartRate(dp.heart);
-							d3.select(".travelMarker").attr("fill", calorieScale(calculateCaloriesBurned(dp.heart)));
-							d3.select(".c" + currentPoint).style("opacity", 1);
-							chartPath.attr("d", area);
-							
-							currentPoint++;
-						
-
-						}
-						else {
-						// wait for match
-					}
-				}
 				
 				var oldTime = null;
 				var i = 0;
@@ -388,13 +396,45 @@
 					if (toggle++ % rate == 0) {
 	                    var focus = map.layerPointToLatLng(new L.Point(p.x, p.y));
 						map.panTo(focus);
-						showPoint(p);
+						
+						var dp = featuresdata[currentPoint].properties;
+						if (Math.abs(dp.x - p.x) <= 10 && Math.abs(dp.y - p.y) <= 10) {
+						
+							console.log("1 reaches " + currentPoint);
+							dummyData.push({
+								"time": currentPoint,
+								"heart": dp.heart
+							});
+							
+							setHeartRate(dp.heart);
+							d3.select(".travelMarker").attr("fill", calorieScale(calculateCaloriesBurned(dp.heart)));
+							d3.select(".c" + currentPoint).style("opacity", 1);
+							chartPath.attr("d", area);
+							
+							currentPoint++;
+						
+
+						}
 					}
 					
 				}, p.t);
 				
 				setTimeout(function() {
 					marker2.attr("transform", "translate(" + p2.x + "," + p2.y + ")");
+					
+					var dp2 = featuresdata[currentPoint2].properties;
+						if (Math.abs(dp2.x - p2.x) <= 10 && Math.abs(dp2.y - p2.y) <= 10) {
+							dummyData2.push({
+								"time": currentPoint2,
+								"heart": dp2.heart
+})
+								currentPoint2++;
+							console.log("2 reaches " + currentPoint2);
+							}
+							
+							
+							chartPath2.attr("d", area);
+							
 					
 				}, p2.t);
 			}

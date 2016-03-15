@@ -26,6 +26,19 @@
 			position: relative;
 		}
 		
+		#speed {
+			position: absolute;
+			top:20px;
+			right:20px;
+			background: #fff;
+			opacity: 0.6;
+			font-size:72px;
+			height:200px;
+			width:200px;
+			text-align:center;
+			line-height: 200px;
+		}
+		
 		#path1 {
 		fill:none;
 			stroke-width: 2px;
@@ -82,8 +95,9 @@
     </style>
 </head>
 <body>
-	<div id="demo"></div>
+
 	<div id="map"></div>
+	<div id="speed"></div>
 		<script type="text/javascript">
 // 		'http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png
 
@@ -103,6 +117,8 @@
 			/*
 			 * chart
 			 */
+			 
+			 d3.select("#speed").text("47");
 			 
 			 var margin = { top: 20, right: 20, bottom: 30, left: 50 };
 			 var areaChartWidth = window.innerWidth;
@@ -413,6 +429,8 @@
 								"time": currentPoint,
 								"heart": dp.heart
 							});
+							
+							d3.select("#speed").text(dp.speed);
 							
 							setHeartRate(dp.heart);
 							d3.select(".travelMarker").attr("fill", calorieScale(calculateCaloriesBurned(dp.heart)));

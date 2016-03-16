@@ -31,24 +31,25 @@
 			top:20px;
 			right:20px;
 			background: #fff;
-			opacity: 0.6;
+			opacity: 0.7;
 			font-size:22px;
 			height:200px;
 			width:300px;
 			text-align:center;
+			display:none;
 		}
 		
 		#path1 {
 		fill:none;
-			stroke-width: 2px;
-			stroke: red;
+			stroke-width: 3px;
+			stroke: blue;
 			stroke-opacity: 1;
 		}
 		
 		#path2 {
 		fill:none;
-			stroke-width: 2px;
-			stroke: black;
+			stroke-width: 3px;
+			stroke: red;
 			stroke-opacity: 1;
 		}
 			
@@ -60,12 +61,20 @@
 			opacity: 1;
 		}
 		
+		#marker {
+			fill: blue;
+		}
+		
+		#marker2 {
+			fill: red;
+		}
+		
 		
 		.areaChart {
 			position: absolute;
 			bottom: 0;
 			background: #fff;
-			opacity: 0.6;
+			opacity: 0.7;
 		}
 		
 		.axis path,
@@ -128,6 +137,44 @@
 	}
 	
 	
+	#legend {
+		position: absolute;
+		top:20px;
+		left:60px;
+		background: #fff;
+		opacity: 0.7;
+		font-size:21px;
+		height:375px;
+		width:325px;
+		text-align:center;
+	}
+	
+	#legendTitle {
+		float:left;
+		width:100%;
+		height:20%;
+	}
+	
+	.col1 {
+		float:left;
+		width: 50%;
+		height:20%;
+		text-align:center;
+	}
+	
+	.col2 {
+		float:left;
+		width: 40%;
+		height:20%;
+		text-align:left;
+		padding-left:10%;
+	}
+	
+	#graphCbox, #numericCbox {
+		margin-left:9px;
+		transform: scale(1.75);
+	}
+	
     </style>
 </head>
 <body>
@@ -147,6 +194,13 @@
 			<div id="otherSpeed"> </div>
 		</div>
 	</div>
+	<div id="legend">
+		<div id="legendTitle">Legend</div>
+		<div id="userLabel" class="col1">Self:</div><div id="userCircle" class="col2"><svg><circle r="15" cx="15" cy ="15" fill="blue" /></svg></div>
+		<div id="otherLabel" class="col1">Other:</div><div id="otherCircle" class="col2"><svg><circle r="15" cx="15" cy ="15" fill="red" /></svg></div>
+		<div id="graphLabel" class="col1">Graph View:</div><div class="col2"><input id="graphCbox" type="checkbox" /></div>
+		<div id="numericLabel" class="col1">Numeric View:</div><div class="col2"><input id="numericCbox" type="checkbox" /></div>
+	</div>
 		<script type="text/javascript">
 // 		'http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png
 
@@ -163,15 +217,41 @@
 			var g = svg.append("g").attr("class", "leaflet-zoom-hide");
 			
 			
+			document.getElementById("graphCbox").addEventListener("click", function() {
+				var display = false;
+				if (this.checked) {
+					display = "block";
+				}
+				else {
+					display = "none";
+				}
+				
+				d3.select(".areaChart").style("display", display);
+			});
+			
+			document.getElementById("numericCbox").addEventListener("click", function() {
+				var display = false;
+				if (this.checked) {
+					display = "block";
+				}
+				else {
+					display = "none";
+				}
+				
+				d3.select("#speed").style("display", display);
+			});
 			/*
 			 * chart
 			 */
 			 
 			 
-			 var margin = { top: 20, right: 20, bottom: 30, left: 50 };
-			 var areaChartWidth = window.innerWidth;
+			 var margin = { top: 20, right: 20, bottom: 65, left: 50 };
+			 var areaChartWidth = window.innerWidth - 70;
 			 var areaChartHeight = 200;
 			 
+			 var mi = d3.scale.linear()
+			 		.domain([0, 241]).range([0, 25]);
+			 		
 			 var x = d3.scale.linear()
 			 	.range([0, areaChartWidth]);
 			 	
@@ -192,21 +272,24 @@
 // 				.y1(function(d) { return y(d.heart); });
 
 			var area = d3.svg.line()
-				.x(function(d) {return x(d.time); })
+				.x(function(d) {return x(mi(d.time)); })
 				.y(function(d) { return y(d.heart); });
 				
 			var areaChartSvg = d3.select("body").append("svg")
 				.attr("width", areaChartWidth + margin.left + margin.right)
 				.attr("height", areaChartHeight + margin.top + margin.bottom)
 				.attr("class", "areaChart")
+				.style("display", "none")
 				.append("g")
 				.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+				
+				
 				
 				var dummyData = [];
 				 
 				var dummyData2 = [];
 				
-				x.domain([0, 241]);
+				x.domain([0, 25]);
 				y.domain([40, 220]);
 				
 				var chartPath = areaChartSvg.append("path")
@@ -222,7 +305,12 @@
 				areaChartSvg.append("g")
 					.attr("class", "x axis")
 					.attr("transform", "translate(0," + areaChartHeight + ")")
-					.call(xAxis);
+					.call(xAxis)
+					.append("text")
+					.attr("y", 47)
+					.attr("x", 880)
+					.style("font-size", "18px")
+					.text("Distance (Mi)");
 					
 				areaChartSvg.append("g")
 					.attr("class", "y axis")
@@ -231,8 +319,17 @@
 					.attr("transform", "rotate(-90)")
 					.attr("y", 6)
 					.attr("dy", "0.71em")
+					.style("font-size", "18px")
 					.style("text-anchor", "end")
 					.text("Heart Rate (BPM)");
+					
+// 				svg.append('line')
+// 					.attr({
+// 						x1: x(10), // x() is your scaling function, 10 is the value where you want a line to be placed
+// 						y1: 0, // height of your chart
+// 						x2: x(10), // same as x1 for a horizontal line
+// 						y2: chartH // height of your chart
+// 					});
 					
 			
 			/*
@@ -331,8 +428,8 @@
 			reset();
 			
 			var precision = 10000;
-			var minHeart = 15;
-			var maxHeart = 10;
+			var minHeart = 12;
+			var maxHeart = 20;
 			var heartRate = 600;
 			conversion();
 			heartBeatUp();
@@ -479,9 +576,9 @@
 							
 							d3.select("#selfSpeed").text(dp.speed);
 							d3.select("#otherSpeed").text(featuresdata2[currentPoint2].properties.speed);
-							d3.select("#s2").text(parseInt(dp.speed) - parseInt(featuresdata2[currentPoint2].properties.speed));
+							d3.select("#s2").text(parseInt(dp.speed) - parseInt(featuresdata2[currentPoint].properties.speed));
 							setHeartRate(dp.heart);
-							d3.select(".travelMarker").attr("fill", calorieScale(calculateCaloriesBurned(dp.heart)));
+// 							d3.select(".travelMarker").attr("fill", calorieScale(calculateCaloriesBurned(dp.heart)));
 							d3.select(".c" + currentPoint).style("opacity", 1);
 							chartPath.attr("d", area);
 							

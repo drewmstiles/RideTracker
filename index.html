@@ -319,7 +319,7 @@
 				var marker = g.append("circle")
 					.attr("r", 10)
 					.attr("id", "marker")
-					.attr("class", "travelMarker");
+					.attr("class", "travelMarker")
 					
 				var marker2 = g.append("circle")
 					.attr("r", 10)
@@ -403,6 +403,7 @@
 			}
 									
 
+			map.on("viewreset", reset);
 			
 			function reset() {
 				var bounds = d3path.bounds(collection),
@@ -442,8 +443,6 @@
 				}
 				
 				
-				var oldTime = null;
-				var i = 0;
 				
 					function heartBeatUp() {
 						marker.transition().duration(heartRate).attr("r", maxHeart).each("end", heartBeatDown);
@@ -486,7 +485,10 @@
 							d3.select(".c" + currentPoint).style("opacity", 1);
 							chartPath.attr("d", area);
 							
-							currentPoint++;
+							if (currentPoint != 239) {
+						currentPoint++;
+					} else {
+					}
 			 			
 
 						}
@@ -503,7 +505,10 @@
 								"time": currentPoint2,
 								"heart": dp2.heart
 });
-								currentPoint2++;
+								if (currentPoint2 != 239) {
+						currentPoint2++;
+						} else {
+						}
 							console.log("2 reaches " + currentPoint2);
 														console.log("2 heart" + dp2.heart);
 							chartPath2.attr("d", area);
@@ -585,6 +590,15 @@
 		}
 			
 			function mapCoordinatesToView(data) {
+				for (var i = 0; i < data.length; i++) {
+					var coordinates = applyLatLngToLayer(data[i]);
+					
+					data[i].properties.x = coordinates.x;
+					data[i].properties.y = coordinates.y;
+				}
+			}
+			
+			function coordsToView(data) {
 				for (var i = 0; i < data.length; i++) {
 					var coordinates = applyLatLngToLayer(data[i]);
 					

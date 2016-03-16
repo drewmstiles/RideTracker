@@ -32,7 +32,7 @@
 			right:20px;
 			background: #fff;
 			opacity: 0.7;
-			font-size:22px;
+			font-size:18px;
 			height:200px;
 			width:300px;
 			text-align:center;
@@ -108,23 +108,14 @@
 		width:100%;
 		height:20%;
 	}
-	#s1, #s3 {
+	#s1, #s2 {
 		float:left;
-		width:40%;
+		width:50%;
 		height:80%;
 		text-align:center;
-		font-size:20px;
+		font-size:15px;
 	}
-	
-	#s2 {
-		float:left;
-		width:20%;
-		height:80%;
-		text-align:center;
-		vertical-align:middle;
-		font-size:35px;
-		margin-top:48px;
-	}
+
 	
 	#selfSpeed {
 		color:red;
@@ -143,31 +134,35 @@
 		left:60px;
 		background: #fff;
 		opacity: 0.7;
-		font-size:21px;
-		height:375px;
-		width:325px;
+		font-size:15px;
+		height:300px;
+		width:250px;
 		text-align:center;
 	}
 	
 	#legendTitle {
+	margin-top:20px;
+	font-weight:bold;
+	font-size:18px;
 		float:left;
 		width:100%;
-		height:20%;
+		height:17%;
 	}
 	
 	.col1 {
 		float:left;
-		width: 50%;
+		width: 60%;
+		padding-left:20%
 		height:20%;
 		text-align:center;
 	}
 	
 	.col2 {
 		float:left;
-		width: 40%;
+		width: 35%;
 		height:20%;
 		text-align:left;
-		padding-left:10%;
+		padding-left:5%;
 	}
 	
 	#graphCbox, #numericCbox {
@@ -183,15 +178,14 @@
 	<div id="speed">
 		<div id="s0">Speed (MPH)</div>
 		<div id="s1">
-			Self<br />
 			<div id="selfSpeed"> </div>
+			<div id="selfAvg">Avg: <span id="savg">0</span></div>
+			<div id="selfMax">Max: <span id="smax">0</span></div>
 		</div>
 		<div id="s2">
-			
-		</div>
-		<div id="s3">
-			Other<br />
 			<div id="otherSpeed"> </div>
+			<div id="otherAvg">Avg: <span id="oavg">0 </span></div>
+			<div id="otherMax">Max: <span id="omax">0</span></div>
 		</div>
 	</div>
 	<div id="legend">
@@ -247,7 +241,7 @@
 			 
 			 var margin = { top: 20, right: 20, bottom: 65, left: 50 };
 			 var areaChartWidth = window.innerWidth - 70;
-			 var areaChartHeight = 200;
+			 var areaChartHeight = 150;
 			 
 			 var mi = d3.scale.linear()
 			 		.domain([0, 241]).range([0, 25]);
@@ -264,7 +258,8 @@
 			 	
 			var yAxis = d3.svg.axis()
 				.scale(y)
-				.orient("left");
+				.orient("left")
+				.tickValues(d3.range(40, 240, 40));
 // 				
 // 			var area = d3.svg.area()
 // 				.x(function(d) {return x(d.time); })
@@ -290,7 +285,7 @@
 				var dummyData2 = [];
 				
 				x.domain([0, 25]);
-				y.domain([40, 220]);
+				y.domain([40, 240]);
 				
 				var chartPath = areaChartSvg.append("path")
 					.datum(dummyData)
@@ -308,8 +303,8 @@
 					.call(xAxis)
 					.append("text")
 					.attr("y", 47)
-					.attr("x", 880)
-					.style("font-size", "18px")
+					.attr("x", 650)
+					.style("font-size", "15px")
 					.text("Distance (Mi)");
 					
 				areaChartSvg.append("g")
@@ -319,7 +314,7 @@
 					.attr("transform", "rotate(-90)")
 					.attr("y", 6)
 					.attr("dy", "0.71em")
-					.style("font-size", "18px")
+					.style("font-size", "15px")
 					.style("text-anchor", "end")
 					.text("Heart Rate (BPM)");
 					
@@ -348,8 +343,7 @@
 				
 				var featuresdata2 = JSON.parse(JSON.stringify(collection.features));
 				
-				console.log(featuresdata);
-				console.log(featuresdata2);
+	
 				for (var i = 0; i < featuresdata2.length; i++) {
 					if (i < 20) {
 						featuresdata2[i].properties.speed = featuresdata2[i].properties.speed - 5;
@@ -568,7 +562,6 @@
 						var dp = featuresdata[currentPoint].properties;
 						if (Math.abs(dp.x - p.x) <= 10 && Math.abs(dp.y - p.y) <= 10) {
 						
-							console.log("1 reaches " + currentPoint);
 							dummyData.push({
 								"time": currentPoint,
 								"heart": dp.heart
@@ -576,7 +569,24 @@
 							
 							d3.select("#selfSpeed").text(dp.speed);
 							d3.select("#otherSpeed").text(featuresdata2[currentPoint2].properties.speed);
-							d3.select("#s2").text(parseInt(dp.speed) - parseInt(featuresdata2[currentPoint].properties.speed));
+							
+							var selfCurrentAvg = parseInt(document.getElementById("savg").innerHTML);
+							var otherCurrentAvg = parseInt(document.getElementById("oavg").innerHTML);
+							
+							var selfNewAvg = (selfCurrentAvg + parseInt(dp.speed)) / 2;
+							if (isNaN(selfNewAvg)) selfNewAvg = 0;
+							d3.select("#savg").text(selfNewAvg);
+							
+							var otherNewAvg = (otherCurrentAvg + parseInt(featuresdata2[currentPoint2].properties.speed)) / 2;
+							if (isNaN(otherNewAvg)) otherNewAvg = 0;
+							d3.select("#oavg").text(otherNewAvg);
+							
+							var selfCurrentMax = parseInt(document.getElementById("smax").innerHTML);
+							var otherCurrentMax = parseInt(document.getElementById("omax").innerHTML);
+							
+							if (parseInt(dp.speed) > selfCurrentMax) d3.select("#smax").text(dp.speed);
+							if (parseInt(featuresdata2[currentPoint2].properties.speed) > otherCurrentMax) d3.select("#omax").text(featuresdata2[currentPoint2].properties.speed);
+							
 							setHeartRate(dp.heart);
 // 							d3.select(".travelMarker").attr("fill", calorieScale(calculateCaloriesBurned(dp.heart)));
 							d3.select(".c" + currentPoint).style("opacity", 1);
@@ -606,8 +616,6 @@
 						currentPoint2++;
 						} else {
 						}
-							console.log("2 reaches " + currentPoint2);
-														console.log("2 heart" + dp2.heart);
 							chartPath2.attr("d", area);
 							}
 							

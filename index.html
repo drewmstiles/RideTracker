@@ -67,6 +67,7 @@
 		
 		#marker2 {
 			fill: red;
+			r:16;
 		}
 		
 		
@@ -82,7 +83,6 @@
 			fill: none;
 			stroke: #000;
 			shape-rendering: crispEdges;
-			stroke-width:1;
 		}
 		
 		.axis text {
@@ -91,7 +91,8 @@
 
 	.lineConnect {
 		fill: none;
-		stroke: orange;
+					stroke-width: 5px;
+		stroke: purple;
 		opacity: 0;
 	}
 	.locnames {
@@ -135,7 +136,7 @@
 		background: #fff;
 		opacity: 0.7;
 		font-size:15px;
-		height:300px;
+		height:325px;
 		width:250px;
 		text-align:center;
 		-webkit-transition: height 1s;
@@ -160,19 +161,19 @@
 		float:left;
 		width: 60%;
 		padding-left:20%
-		height:23%;
+		height:19%;
 		text-align:center;
 	}
 	
 	.col2 {
 		float:left;
 		width: 35%;
-		height:23%;
+		height:19%;
 		text-align:left;
 		padding-left:5%;
 	}
 	
-	#graphCbox, #numericCbox {
+	#graphCbox, #numericCbox, #pathCbox {
 		margin-left:9px;
 		transform: scale(1.75);
 	}
@@ -215,10 +216,11 @@
 			<div id="rpad"><button id="collapseLegend">&#9650;</button></div> 
 		</div>
 		<div id="legendBody">
-			<div id="userLabel" class="col1">Self:</div><div id="userCircle" class="col2"><svg><circle r="15" cx="15" cy ="15" fill="blue" /></svg></div>
-			<div id="otherLabel" class="col1">Other:</div><div id="otherCircle" class="col2"><svg><circle r="15" cx="15" cy ="15" fill="red" /></svg></div>
-			<div id="graphLabel" class="col1">Graph View:</div><div class="col2"><input id="graphCbox" type="checkbox" /></div>
-			<div id="numericLabel" class="col1">Numeric View:</div><div class="col2"><input id="numericCbox" type="checkbox" /></div>
+			<div id="userLabel" class="col1">Self</div><div id="userCircle" class="col2"><svg><circle r="15" cx="15" cy ="15" fill="blue" /></svg></div>
+			<div id="otherLabel" class="col1">Other</div><div id="otherCircle" class="col2"><svg><circle r="15" cx="15" cy ="15" fill="red" /></svg></div>
+			<div id="graphLabel" class="col1">Graph View</div><div class="col2"><input id="graphCbox" type="checkbox" /></div>
+			<div id="numericLabel" class="col1">Numeric View</div><div class="col2"><input id="numericCbox" type="checkbox" /></div>
+			<div id="pathLabel" class="col1">Show Path</div><div class="col2"><input id="pathCbox" type="checkbox" /></div>
 		</div>
 	</div>
 		<script type="text/javascript">
@@ -261,6 +263,16 @@
 				d3.select("#speed").style("display", display);
 			});
 			
+			document.getElementById("pathCbox").addEventListener("click", function() {
+				var display = false;
+				if (this.checked) {
+					d3.select(".lineConnect").style("opacity", "1");
+				}
+				else {
+					d3.select(".lineConnect").style("opacity", "0");
+				}
+			});
+			
 			var collapsed = false;
 			document.getElementById("collapseLegend").addEventListener("click", function() {
 				collapsed = !collapsed;
@@ -276,7 +288,7 @@
 				}
 				else {
 					d3.select("#collapseLegend").html("&#9650;");
-					d3.select("#legend").style("height", "300px");	
+					d3.select("#legend").style("height", "325px");	
 					setTimeout(function() {
 						d3.select("#legendBody").style("display", "block");
 					},
@@ -398,6 +410,7 @@
 	
 				for (var i = 0; i < featuresdata2.length; i++) {
 					if (i < 12) {
+						featuresdata2[i].properties.speed = parseInt(featuresdata2[i].properties.speed) - 5;					
 						featuresdata2[i].properties.heart = parseInt(featuresdata2[i].properties.heart) - (Math.floor(Math.random() * 3) + 2);
 					}
 					else if (i < 65) {
@@ -492,7 +505,7 @@
 			var heartRate2 = 600;
 			conversion();
 			heartBeatUp();
-			heartBeatUp2();
+// 			heartBeatUp2();
 			function conversion() {
 				var l = linePath.node().getTotalLength();
 				for (var i = 1; i <= precision; i++) {

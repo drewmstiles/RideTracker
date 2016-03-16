@@ -91,8 +91,8 @@
 
 	.lineConnect {
 		fill: none;
-		stroke: blue;
-		opacity: 1;
+		stroke: orange;
+		opacity: 0;
 	}
 	.locnames {
 		fill: white;
@@ -397,14 +397,26 @@
 				
 	
 				for (var i = 0; i < featuresdata2.length; i++) {
-					if (i < 20) {
-						featuresdata2[i].properties.speed = featuresdata2[i].properties.speed - 5;
-						featuresdata2[i].properties.heart = featuresdata2[i].properties.heart - ((Math.random() * 20));
+					if (i < 12) {
+						featuresdata2[i].properties.heart = parseInt(featuresdata2[i].properties.heart) - (Math.floor(Math.random() * 3) + 2);
+					}
+					else if (i < 65) {
+						featuresdata2[i].properties.speed = parseInt(featuresdata2[i].properties.speed) + (Math.floor(Math.random() * 2) + 1);
+						featuresdata2[i].properties.heart = parseInt(featuresdata2[i].properties.heart) + (Math.floor(Math.random() * 20) + 10);
+					}
+					else if (i < 150) {
+						featuresdata2[i].properties.speed = parseInt(featuresdata2[i].properties.speed) - (Math.floor(Math.random() * 3) + 6);
+						featuresdata2[i].properties.heart = parseInt(featuresdata2[i].properties.heart) + (Math.floor(Math.random() * 5) + 17);
+					}
+					else if (i < 200) {
+						featuresdata2[i].properties.speed = parseInt(featuresdata2[i].properties.speed) + (Math.floor(Math.random() * 3) + 5);
+						featuresdata2[i].properties.heart = parseInt(featuresdata2[i].properties.heart) - (Math.floor(Math.random() * 5) + 17);
 					}
 					else {
-						featuresdata2[i].properties.speed = featuresdata2[i].properties.speed + 5;
-						featuresdata2[i].properties.heart = parseInt(featuresdata2[i].properties.heart) + ((Math.random() * 20));
+						featuresdata2[i].properties.speed = parseInt(featuresdata2[i].properties.speed) + (Math.floor(Math.random() * 2) + 2);
+						featuresdata2[i].properties.heart = parseInt(featuresdata2[i].properties.heart) + (Math.floor(Math.random() * 5) + 10);
 					}
+						
 				}
 					
 				
@@ -641,11 +653,13 @@
 							
 							setHeartRate(dp.heart);
 // 							d3.select(".travelMarker").attr("fill", calorieScale(calculateCaloriesBurned(dp.heart)));
-							d3.select(".c" + currentPoint).style("opacity", 1);
+// 							d3.select(".c" + currentPoint).style("opacity", 1);
 							chartPath.attr("d", area);
 							
 							if (currentPoint != 239) {
-						currentPoint++;
+							currentPoint++;
+							console.log(currentPoint);
+							
 					} else {
 					}
 			 			

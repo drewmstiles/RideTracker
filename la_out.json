@@ -1161,7 +1161,7 @@
         "region": "hill-climb",
         "time": 68,
         "heart": "159",
-        "speed": "7",
+        "speed": "17",
         "elevation": "440"
       },
       "type": "Feature",
@@ -1178,7 +1178,7 @@
         "region": "hill-climb",
         "time": 69,
         "heart": "158",
-        "speed": "7",
+        "speed": "18",
         "elevation": "480"
       },
       "type": "Feature",
@@ -1195,7 +1195,7 @@
         "region": "hill-climb",
         "time": 70,
         "heart": "156",
-        "speed": "6",
+        "speed": "20",
         "elevation": "520"
       },
       "type": "Feature",
@@ -1212,7 +1212,7 @@
         "region": "hill-climb",
         "time": 71,
         "heart": "159",
-        "speed": "7",
+        "speed": "20",
         "elevation": "560"
       },
       "type": "Feature",
@@ -1229,7 +1229,7 @@
         "region": "hill-climb",
         "time": 72,
         "heart": "155",
-        "speed": "6",
+        "speed": "19",
         "elevation": "600"
       },
       "type": "Feature",
@@ -1246,7 +1246,7 @@
         "region": "hill-climb",
         "time": 73,
         "heart": "157",
-        "speed": "6",
+        "speed": "18",
         "elevation": "640"
       },
       "type": "Feature",
@@ -1263,7 +1263,7 @@
         "region": "hill-climb",
         "time": 74,
         "heart": "155",
-        "speed": "7",
+        "speed": "17",
         "elevation": "680"
       },
       "type": "Feature",
@@ -1280,7 +1280,7 @@
         "region": "hill-climb",
         "time": 75,
         "heart": "156",
-        "speed": "7",
+        "speed": "16",
         "elevation": "720"
       },
       "type": "Feature",
@@ -1297,7 +1297,7 @@
         "region": "hill-climb",
         "time": 76,
         "heart": "157",
-        "speed": "5",
+        "speed": "15",
         "elevation": "760"
       },
       "type": "Feature",
@@ -1314,7 +1314,7 @@
         "region": "hill-climb",
         "time": 77,
         "heart": "159",
-        "speed": "7",
+        "speed": "14",
         "elevation": "800"
       },
       "type": "Feature",
@@ -1331,7 +1331,7 @@
         "region": "hill-climb",
         "time": 78,
         "heart": "156",
-        "speed": "5",
+        "speed": "13",
         "elevation": "840"
       },
       "type": "Feature",
@@ -1348,7 +1348,7 @@
         "region": "hill-climb",
         "time": 79,
         "heart": "156",
-        "speed": "6",
+        "speed": "13",
         "elevation": "880"
       },
       "type": "Feature",
@@ -1365,7 +1365,7 @@
         "region": "hill-climb",
         "time": 80,
         "heart": "159",
-        "speed": "7",
+        "speed": "13",
         "elevation": "920"
       },
       "type": "Feature",
@@ -1382,7 +1382,7 @@
         "region": "hill-climb",
         "time": 81,
         "heart": "158",
-        "speed": "5",
+        "speed": "13",
         "elevation": "960"
       },
       "type": "Feature",
@@ -1399,7 +1399,7 @@
         "region": "hill-climb",
         "time": 82,
         "heart": "157",
-        "speed": "6",
+        "speed": "12",
         "elevation": "1000"
       },
       "type": "Feature",
@@ -1416,7 +1416,7 @@
         "region": "hill-climb",
         "time": 83,
         "heart": "158",
-        "speed": "5",
+        "speed": "12",
         "elevation": "1040"
       },
       "type": "Feature",
@@ -1433,7 +1433,7 @@
         "region": "hill-top",
         "time": 84,
         "heart": "121",
-        "speed": "10",
+        "speed": "8",
         "elevation": "1176"
       },
       "type": "Feature",
@@ -1450,7 +1450,7 @@
         "region": "hill-top",
         "time": 85,
         "heart": "128",
-        "speed": "12",
+        "speed": "10",
         "elevation": "1240"
       },
       "type": "Feature",

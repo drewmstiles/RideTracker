@@ -489,8 +489,10 @@
 			var minHeart = 12;
 			var maxHeart = 20;
 			var heartRate = 600;
+			var heartRate2 = 600;
 			conversion();
 			heartBeatUp();
+			heartBeatUp2();
 			function conversion() {
 				var l = linePath.node().getTotalLength();
 				for (var i = 1; i <= precision; i++) {
@@ -603,14 +605,29 @@
 						marker.transition().duration(heartRate).attr("r", maxHeart).each("end", heartBeatDown);
 					}
 					
+					function heartBeatUp2() {
+						marker2.transition().duration(heartRate2).attr("r", maxHeart).each("end", heartBeatDown2);
+					}
+					
 					var beat = false;
 					function heartBeatDown() {
 						if (beat) {
 							beat = !beat;
-							marker.transition().duration(heartRate).attr("r", minHeart).each("end", heartBeatDown);
+							marker.transition().duration(heartRate).attr("r", minHeart).each("end", heartBeatDown);					
 						}
 						else {
-							marker.transition().duration(heartRate).attr("r", minHeart).each("end", heartBeatUp);
+							marker.transition().duration(heartRate).attr("r", minHeart).each("end", heartBeatUp);							
+						}
+					}	
+					
+					var beat2 = false;
+					function heartBeatDown2() {
+						if (beat2) {
+							beat2 = !beat2;
+							marker2.transition().duration(heartRate2).attr("r", minHeart).each("end", heartBeatDown2);							
+						}
+						else {
+							marker2.transition().duration(heartRate2).attr("r", minHeart).each("end", heartBeatUp2);							
 						}
 					}	
 						
@@ -652,6 +669,7 @@
 							if (parseInt(featuresdata2[currentPoint2].properties.speed) > otherCurrentMax) d3.select("#omax").text(featuresdata2[currentPoint2].properties.speed);
 							
 							setHeartRate(dp.heart);
+							setHeartRate2(featuresdata2[currentPoint2].properties.heart);
 // 							d3.select(".travelMarker").attr("fill", calorieScale(calculateCaloriesBurned(dp.heart)));
 // 							d3.select(".c" + currentPoint).style("opacity", 1);
 							chartPath.attr("d", area);
@@ -758,6 +776,17 @@
 		var transform = shift * scaleFactor;
 		
 		heartRate = 1200 - (transform + 100); // min of mapped domain
+		}
+		
+		function setHeartRate2(r) {
+		// scaling to range 100 - 1000 ms
+		var scaleFactor = 1000 / 160;
+		
+		var shift = r - 40; // min heart rate
+		
+		var transform = shift * scaleFactor;
+		
+		heartRate2 = 1200 - (transform + 100); // min of mapped domain
 		}
 			
 			function mapCoordinatesToView(data) {

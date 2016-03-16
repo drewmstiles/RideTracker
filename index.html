@@ -138,6 +138,7 @@
 		height:300px;
 		width:250px;
 		text-align:center;
+		-webkit-transition: height 1s;
 	}
 	
 	#legendTitle {
@@ -149,18 +150,24 @@
 		height:17%;
 	}
 	
+	#legendBody {
+		height:80%;
+		width:100%;
+		float:left;
+	}
+	
 	.col1 {
 		float:left;
 		width: 60%;
 		padding-left:20%
-		height:20%;
+		height:23%;
 		text-align:center;
 	}
 	
 	.col2 {
 		float:left;
 		width: 35%;
-		height:20%;
+		height:23%;
 		text-align:left;
 		padding-left:5%;
 	}
@@ -168,6 +175,19 @@
 	#graphCbox, #numericCbox {
 		margin-left:9px;
 		transform: scale(1.75);
+	}
+	
+	#lpad, #rpad {
+		float:left;
+		width:20%;
+		height:100%;
+	}
+	
+	#title {
+		float:left;
+		width:57%;
+		height:100%;
+		text-align:center;
 	}
 	
     </style>
@@ -189,11 +209,17 @@
 		</div>
 	</div>
 	<div id="legend">
-		<div id="legendTitle">Legend</div>
-		<div id="userLabel" class="col1">Self:</div><div id="userCircle" class="col2"><svg><circle r="15" cx="15" cy ="15" fill="blue" /></svg></div>
-		<div id="otherLabel" class="col1">Other:</div><div id="otherCircle" class="col2"><svg><circle r="15" cx="15" cy ="15" fill="red" /></svg></div>
-		<div id="graphLabel" class="col1">Graph View:</div><div class="col2"><input id="graphCbox" type="checkbox" /></div>
-		<div id="numericLabel" class="col1">Numeric View:</div><div class="col2"><input id="numericCbox" type="checkbox" /></div>
+		<div id="legendTitle">
+			<div id="lpad"></div>
+			<div id="title">Legend</div>
+			<div id="rpad"><button id="collapseLegend">&#9650;</button></div> 
+		</div>
+		<div id="legendBody">
+			<div id="userLabel" class="col1">Self:</div><div id="userCircle" class="col2"><svg><circle r="15" cx="15" cy ="15" fill="blue" /></svg></div>
+			<div id="otherLabel" class="col1">Other:</div><div id="otherCircle" class="col2"><svg><circle r="15" cx="15" cy ="15" fill="red" /></svg></div>
+			<div id="graphLabel" class="col1">Graph View:</div><div class="col2"><input id="graphCbox" type="checkbox" /></div>
+			<div id="numericLabel" class="col1">Numeric View:</div><div class="col2"><input id="numericCbox" type="checkbox" /></div>
+		</div>
 	</div>
 		<script type="text/javascript">
 // 		'http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png
@@ -234,6 +260,32 @@
 				
 				d3.select("#speed").style("display", display);
 			});
+			
+			var collapsed = false;
+			document.getElementById("collapseLegend").addEventListener("click", function() {
+				collapsed = !collapsed;
+				
+				if (collapsed) {
+					
+					d3.select("#collapseLegend").html("&#9660;");
+					d3.select("#legend").style("height", "60px");		
+					setTimeout(function() {
+						d3.select("#legendBody").style("display", "none");
+					},
+					250);
+				}
+				else {
+					d3.select("#collapseLegend").html("&#9650;");
+					d3.select("#legend").style("height", "300px");	
+					setTimeout(function() {
+						d3.select("#legendBody").style("display", "block");
+					},
+					250);
+				}
+					
+					
+			});
+			
 			/*
 			 * chart
 			 */
